@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+}
+#wall__pillar {
+	width: 100%;
+	padding-top: 40%;
+}
+
+#wall {
+	position: relative;
+	width: 100%;
+	background: #fff;
+	#Yoon {
+		width: 100%;
+		max-width: 800px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+		bottom: 0;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		margin-bottom: 1.5rem;
+		box-sizing: border-box;
+	}
+}
+body {
+	background: #f1f3f4;
+}
+#root {
+	position: relative;
+	padding-bottom: 130px;
+	z-index: 1;
+}
+.global__center {
+	max-width: 800px;
+	margin: 0 auto;
+	&.relative {
+		position: relative;
+	}
+}
+
+.global__padding {
+	padding: 0 2em;
+}
+
+ul > li {
+	padding-block-end: 1em;
+	&:last-of-type {
+		padding-block-end: 0;
+	}
+}
+li > ul {
+	margin-block-start: 0;
+}
+
+.foreground {
+	&__black {
+		background: #333;
+		color: #f1f1f5;
+	}
+}
+
+#intro {
+	margin: -1em 0;
+	font-family: "Times";
+}
+
+.clear {
+	&:before,
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+		position: absolute;
+	}
+}
+
+.p__container {
+	> p {
+		padding: 1em 0;
+		margin-right: 120px;
+		@media screen and (max-width: 760px) {
+			margin-right: 100px;
+		}
+		@media screen and (max-width: 480px) {
+			margin-right: 80px;
+		}
+	}
+}
+
+#footer {
+	background: #111;
+	height: 300px;
+	color: #f1f1f5;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	z-index: -1;
+}

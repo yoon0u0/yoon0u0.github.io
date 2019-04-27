@@ -1,0 +1,31 @@
+{
+	"name": "yoon0u0.github.io",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://yoon0u0@github.com/yoon0u0/yoon0u0.github.io.git",
+	"author": "Yoonseo Choi <yoon0u0@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"global": "^4.3.2",
+		"handlebars": "^4.1.2",
+		"marked": "^0.6.2",
+		"normalize.css": "^8.0.1",
+		"rollup": "^1.10.1",
+		"rollup-plugin-commonjs": "^9.3.4",
+		"rollup-plugin-md": "^0.0.7",
+		"rollup-plugin-node-globals": "^1.4.0",
+		"rollup-plugin-node-resolve": "^4.2.3",
+		"rollup-plugin-postcss": "^2.0.3",
+		"rollup-plugin-sass": "^1.2.2",
+		"rollup-plugin-terser": "^4.0.4",
+		"typography": "^0.16.19"
+	},
+	"scripts": {
+		"build": "rollup -c",
+		"watch": "rollup -cw",
+		"serve": "serve"
+	},
+	"devDependencies": {
+		"rollup-plugin-node-builtins": "^2.1.2"
+	}
+}

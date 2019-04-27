@@ -1,6 +1,47 @@
 <!DOCTYPE>
 <html>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+  <head>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bundle.css">
+  </head>
   <body>
-    hello world
+    <div id="wall">
+      <div class="global__center">
+        <div id="wall__pillar">
+            <h1 id="Yoon">Yoonseo Choi</h1>
+            <a href="https://github.com/yoon0u0"><i class="fab fa-github icons"></i></a>
+            <a href="mailto:yoon0u0@gmail.com"><i class="fas fa-envelope icons"></i></a>
+            <a href="" class="icons">CV</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="global__center global__padding relative">
+      <div id="profile">
+        <div class="profile__inner"></div>
+      </div>
+    </div>
+    <div id="root" class="clear">
+        <script id="entry-template" type="text/x-handlebars-template">
+          <div id="intro" class="foreground__black clear" >
+            <div class="global__center global__padding clear p__container">
+              {{{intro}}}
+            </div>
+          </div>
+          <div class="global__center global__padding clear">
+              {{{research}}}
+          </div>
+          <div class="global__center global__padding clear">
+              {{{news}}}
+          </div>
+          <div class="global__center global__padding clear">
+              {{{education}}}
+          </div>
+
+        </script>
+    </div>
+    <script src="./bundle.js"></script>
   </body>
 </html>

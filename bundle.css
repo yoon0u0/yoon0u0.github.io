@@ -1,0 +1,225 @@
+#profile {
+  position: absolute;
+  width: 120px;
+  z-index: 100;
+  right: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.35s;
+  will-change: transform;
+}
+@media screen and (max-width: 760px) {
+  #profile {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #profile {
+    width: 80px;
+  }
+}
+#profile:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+#profile:hover .profile__inner:after {
+  background: #3fe6b7;
+}
+#profile .profile__inner {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  background-image: url("./profile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#profile .profile__inner:after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.35s;
+  background: #2961fb;
+  opacity: 0.35;
+  mix-blend-mode: luminosity;
+}
+
+.icons {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: #494949;
+  transition: all 0.35s;
+}
+.icons:hover {
+  color: #2961fb;
+}* {
+  box-sizing: border-box;
+}
+
+#wall__pillar {
+  width: 100%;
+  padding-top: 40%;
+}
+
+#wall {
+  position: relative;
+  width: 100%;
+  background: #fff;
+}
+#wall #Yoon {
+  width: 100%;
+  max-width: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f3f4;
+}
+
+#root {
+  position: relative;
+  padding-bottom: 130px;
+  z-index: 1;
+}
+
+.global__center {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.global__center.relative {
+  position: relative;
+}
+
+.global__padding {
+  padding: 0 2em;
+}
+
+ul > li {
+  padding-block-end: 1em;
+}
+ul > li:last-of-type {
+  padding-block-end: 0;
+}
+
+li > ul {
+  margin-block-start: 0;
+}
+
+.foreground__black {
+  background: #333;
+  color: #f1f1f5;
+}
+
+#intro {
+  margin: -1em 0;
+  font-family: "Times";
+}
+
+.clear:before, .clear:after {
+  clear: both;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.p__container > p {
+  padding: 1em 0;
+  margin-right: 120px;
+}
+@media screen and (max-width: 760px) {
+  .p__container > p {
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .p__container > p {
+    margin-right: 80px;
+  }
+}
+
+#footer {
+  background: #111;
+  height: 300px;
+  color: #f1f1f5;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+}@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400");
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gilroy"), url("./fonts/Gilroy-Light.woff2") format("woff2"), url("./fonts/Gilroy-Light.woff") format("woff"), url("./fonts/Gilroy-Light.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Gilroy"), url("./fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("./fonts/Gilroy-ExtraBold.woff") format("woff"), url("./fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small,
+.text_small {
+  font-size: 0.8em;
+}
