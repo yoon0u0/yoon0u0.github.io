@@ -19,6 +19,6 @@ $ yarn watch
 ### View changes on local
 ***
 ```
-$ yarn serve
+$ yarn global add serve
 ```
 You can see my love on `localhost:5000` in default.. <3
