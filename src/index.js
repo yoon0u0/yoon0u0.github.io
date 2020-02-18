@@ -12,6 +12,7 @@ import Handlebars from 'handlebars';
  */
 import intro from './md/intro/index.md';
 import research from './md/research/index.md';
+import publications from './md/publications/index.md';
 import news from './md/news/index.md';
 import education from './md/education/index.md';
 
@@ -22,6 +23,7 @@ var root = document.querySelector('#root');
 var context = {
 	intro,
 	research,
+	publications,
 	news,
 	education
 };

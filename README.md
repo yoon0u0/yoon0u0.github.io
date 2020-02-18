@@ -6,7 +6,7 @@ $ cd yoon0u0.github.io
 $ yarn
 ```
 
-### Build
+### Build changes
 ***
 ```
 $ yarn build
@@ -19,6 +19,6 @@ $ yarn watch
 ### View changes on local
 ***
 ```
-$ yarn global add serve
+$ yarn serve
 ```
 You can see my love on `localhost:5000` in default.. <3
