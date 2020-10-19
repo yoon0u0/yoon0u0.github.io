@@ -1,5 +1,5 @@
 #### News
-- **<a href = "protochat.kixlab.org">Project website</a>** is now available! (2020. 10)
+- **<a href = "https://protochat.kixlab.org">Project website</a>** is now available! (2020. 10)
 - Attending **<a href="https://cscw.acm.org/2020/">CSCW 2020</a>** virtually. Excited to present my first paper! (2020. 10)
 - _**"ProtoChat: Supporting the Conversation Design Process with Crowd Feedback"**_ has been conditionally accepted to the <a href="https://cscw.acm.org/2020/">CSCW 2020</a>! (2020. 08)
 - My first time to present in the workshop! #CUI@CHI (2020. 05)
