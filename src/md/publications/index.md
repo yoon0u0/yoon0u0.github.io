@@ -3,7 +3,12 @@
 **ProtoChat: Supporting the Conversation Design Process with Crowd Feedback**
 **Yoonseo Choi**, Toni-Jan Keith Monserrat, Jeongeon Park, Hyungyu Shin, Nyoungwoo Lee, Juho Kim
 _CSCW 2020_ 
-<a href="https://kixlab.github.io/website-files/2020/cscw2020-Protochat-paper.pdf">Paper</a> | Video | Slides
+<a href="https://kixlab.github.io/website-files/2020/cscw2020-Protochat-paper.pdf">Paper</a> | <a href="https://www.youtube.com/watch?v=oIBt3EkH-eE">Video</a> | <a href = "protochat.kixlab.org">Project Website</a>
+
+**ProtoChat: Supporting the Conversation Design Process with Crowd Feedback**
+**Yoonseo Choi**, Toni-Jan Keith Monserrat, Jeongeon Park, Hyungyu Shin, Nyoungwoo Lee, Juho Kim
+_CSCW 2020 Demonstration_ 
+<a href="https://kixlab.github.io/website-files/2020/cscw2020-Protochat-demo.pdf">Paper</a> | <a href="https://www.youtube.com/watch?v=x_nYnn8S3u8&feature=youtu.be">Video</a>
 
 **Leveraging the Crowd to Support the Conversation Design Process**
 **Yoonseo Choi**, Hyungyu Shin, Toni-Jan Keith Monserrat, Nyoungwoo Lee, Jeongeon Park, Juho Kim
