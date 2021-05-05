@@ -1,5 +1,10 @@
 #### Publications
 
+**Winder: Linking Speech and Visual Objects to Support Communication in Asynchronous Collaboration**
+Tae Soo Kim, Seungsu Kim, **Yoonseo Choi**, Juho Kim
+_CHI 2021_
+Paper (To appear) | <a href="https://winder.kixlab.org/">Project Website</a>
+
 **ProtoChat: Supporting the Conversation Design Process with Crowd Feedback**
 **Yoonseo Choi**, Toni-Jan Keith Monserrat, Jeongeon Park, Hyungyu Shin, Nyoungwoo Lee, Juho Kim
 _CSCW 2020_ 
@@ -19,4 +24,3 @@ _CHI 2020 Workshop on CUI@CHI: Mapping Grand Challenges for the Conversational U
 **Yoonseo Choi**, Hyungyu Shin, Toni-Jan Keith Monserrat, Nyoungwoo Lee, Jeongeon Park, Juho Kim
 _CHI2020 Late Breaking Work_ 
 <a href="https://kixlab.github.io/website-files/2020/chi2020-lbw-ProtoChat-poster.pdf">Paper</a> | <a href = "https://dl.acm.org/doi/10.1145/3334480.3382951">ACM DL</a>
-
