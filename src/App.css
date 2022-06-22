@@ -1,0 +1,17 @@
+.frame {
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+
+    position: absolute;
+    width: 588px;
+    height: 1358.62px;
+    left: calc(50% - 588px/2 + 152px);
+    top: 64px;
+
+}
