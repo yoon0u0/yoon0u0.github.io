@@ -20,7 +20,7 @@ function App() {
       }}
       py={8}
       px={{
-        xs: 4,
+        xs: 2,
         md: 0
       }}
       gap={{

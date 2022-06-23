@@ -1,8 +1,5 @@
 .name {
 
-    width: 162px;
-    height: 29px;
-
     font-family: 'Product Sans';
     font-style: normal;
     font-weight: 700;
@@ -15,13 +12,12 @@
 
     /* Inside auto layout */
 
-    flex: none;
+    
     order: 0;
     flex-grow: 0;
 }
 
 .intro {
-    margin-top: 10px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -36,7 +32,7 @@
 
     /* Inside auto layout */
 
-    flex: none;
+    
     order: 1;
     align-self: stretch;
     flex-grow: 0;
@@ -51,13 +47,12 @@
     padding: 0px;
     gap: 8px;
 
-    width: 184px;
     height: 40px;
 
 
     /* Inside auto layout */
 
-    flex: none;
+    
     order: 2;
     flex-grow: 0;
 }
@@ -80,7 +75,7 @@
 
     /* Inside auto layout */
 
-    flex: none;
+    
     order: 0;
     flex-grow: 0;
 }
@@ -90,7 +85,7 @@
     height: 20px;    
     /* Inside auto layout */
     
-    flex: none;
+    
     order: 0;
     flex-grow: 0;
 }

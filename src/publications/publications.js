@@ -2,6 +2,7 @@ import './publications.css';
 import protochat_img from './protochat.jpeg'
 import winder_img from './winder.png'
 import stylette_img from './stylette.png'
+import { Stack, Box } from '@mui/material';
 
 function Publications() {
     return (
@@ -9,8 +10,31 @@ function Publications() {
             <div className = "section-title">Publications</div>
             <div className="subsection">
                 <div className='subsection-title'>Paper</div>
-                <div className="paper">
-                    <div className="thumbnail"><img className = "img" src={stylette_img} /></div>
+                <Stack gap={10}>
+                <Stack
+                    flexDirection={{
+                        xs: 'column',
+                        sm: 'row'
+                    }}
+                    gap={{
+                        xs: 20/8,
+                        sm: 20/8
+                    }}
+                >
+                    <Box sx={{
+                        width: {
+                            xs: 'auto',
+                            sm: 208
+                        },
+                        height: 128.62,
+                        textAlign: {
+                            xs: 'center',
+                            sm: 'left'
+                        },
+                        flexShrink: 0,
+                    }}>
+                        <img className = "img" src={stylette_img} />
+                    </Box>
                     <div className='paper-content'>
                         <div className="title">Stylette: Styling the Web with Natural Language</div>
                         <div className='info'>
@@ -28,10 +52,32 @@ function Publications() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Stack>
 
-                <div className="paper">
-                    <div className="thumbnail"><img className = "img" src={winder_img} /></div>
+                <Stack
+                    flexDirection={{
+                        xs: 'column',
+                        sm: 'row'
+                    }}
+                    gap={{
+                        xs: 20/8,
+                        sm: 20/8
+                    }}
+                >
+                    <Box sx={{
+                        width: {
+                            xs: 'auto',
+                            sm: 208
+                        },
+                        height: 128.62,
+                        textAlign: {
+                            xs: 'center',
+                            sm: 'left'
+                        },
+                        flexShrink: 0,
+                    }}>
+                        <img className = "img" src={winder_img} />
+                    </Box>
                     <div className='paper-content'>
                         <div className="title">Winder: Linking Speech and Visual Objects to Support Communication in Asynchronous Collaboration</div>
                         <div className='info'>
@@ -48,10 +94,32 @@ function Publications() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Stack>
 
-                <div className="paper">
-                    <div className="thumbnail"><img className = "img" src={protochat_img} /></div>
+                <Stack
+                    flexDirection={{
+                        xs: 'column',
+                        sm: 'row'
+                    }}
+                    gap={{
+                        xs: 20/8,
+                        sm: 20/8
+                    }}
+                >
+                    <Box sx={{
+                        width: {
+                            xs: 'auto',
+                            sm: 208
+                        },
+                        height: 128.62,
+                        textAlign: {
+                            xs: 'center',
+                            sm: 'left'
+                        },
+                        flexShrink: 0,
+                    }}>
+                        <img className = "img" src={protochat_img} />
+                    </Box>
                     <div className='paper-content'>
                         <div className="title">ProtoChat: Supporting the Conversation Design Process with Crowd Feedback</div>
                         <div className='info'>
@@ -69,7 +137,8 @@ function Publications() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Stack>
+                </Stack>
             </div>
 
             <div className="subsection">
