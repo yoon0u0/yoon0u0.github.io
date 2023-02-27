@@ -2,6 +2,7 @@ import './publications.css';
 import protochat_img from './protochat.jpeg'
 import winder_img from './winder.png'
 import stylette_img from './stylette.png'
+import creator_img from './creator.png'
 import { Stack, Box } from '@mui/material';
 
 function Publications() {
@@ -11,6 +12,46 @@ function Publications() {
             <div className="subsection">
                 <div className='subsection-title'>Paper</div>
                 <Stack gap={10}>
+                
+                <Stack
+                    flexDirection={{
+                        xs: 'column',
+                        sm: 'row'
+                    }}
+                    gap={{
+                        xs: 20/8,
+                        sm: 20/8
+                    }}
+                >
+                    <Box sx={{
+                        width: {
+                            xs: 'auto',
+                            sm: 208
+                        },
+                        height: 128.62,
+                        textAlign: {
+                            xs: 'center',
+                            sm: 'left'
+                        },
+                        flexShrink: 0,
+                    }}>
+                        <img className = "img" src={creator_img} />
+                    </Box>
+                    <div className='paper-content'>
+                        <div className="title">Creator-friendly Algorithms: Behaviors, Challenges, and Design Opportunities in Algorithmic Platforms</div>
+                        <div className='info'>
+                            <div className="author"><mark>Yoonseo Choi</mark>, Eun Jeong Kang, Min Kyung Lee, Juho Kim</div>
+                            <div className="conf-link">
+                                <div className="conf">
+                                    <div className='conf-content'>CHI 2023</div>
+                                </div>
+                                <div className="paper-link">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Stack>
+
                 <Stack
                     flexDirection={{
                         xs: 'column',
