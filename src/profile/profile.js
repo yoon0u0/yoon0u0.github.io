@@ -68,8 +68,8 @@ function Profile({ sx, ...rest }) {
         <div className="intro">
           I’m Yoonseo Choi, a Ph.D. student at KAIST, working with Prof. Juho Kim.
           I’m doing research in HCI with high interests in Human-AI collaboration, creator economy platform, algorithmic experience, and iterative design process.
-          With the belief that technology should be directed toward people, I am studying how AI algorithms underlying various online platforms affect people, 
-          how end users can use these algorithms for their platform activities and furthermore, 'collaborate' with algorithms. 
+          I am studying how AI algorithms underlying various online platforms affect multiple stakeholders (e.g., creator, viewer, advertiser), 
+          how they can use these algorithms for their platform activities, and furthermore, happily 'collaborate' with algorithms. 
         </div>
         <div className="external-link">
           <div className="link">

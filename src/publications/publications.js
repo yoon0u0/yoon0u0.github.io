@@ -11,7 +11,7 @@ function Publications() {
             <div className = "section-title">Publications</div>
             <div className="subsection">
                 <div className='subsection-title'>Paper</div>
-                <Stack gap={10}>
+                <Stack gap={5}>
                 
                 <Stack
                     flexDirection={{
