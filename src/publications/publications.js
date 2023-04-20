@@ -46,7 +46,9 @@ function Publications() {
                                     <div className='conf-content'>CHI 2023</div>
                                 </div>
                                 <div className="paper-link">
-                                    <a className = "each-link" href="https://kixlab.github.io/website-files/2023/chi2023-creatorfriendly-paper.pdf">Paper</a> 
+                                    <a className = "each-link" href = "https://kixlab.github.io/website-files/2023/chi2023-creatorfriendly-paper.pdf">Paper</a>
+                                    <a className = "each-link" href = "https://dl.acm.org/doi/10.1145/3544548.3581386">ACM DL</a> 
+                                    <a className = "each-link" href = "https://creator-friendly.kixlab.org/">Project Website</a>
                                 </div>
                             </div>
                         </div>
