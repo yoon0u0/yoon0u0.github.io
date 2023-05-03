@@ -187,6 +187,24 @@ function Publications() {
 
             <div className="subsection">
                 <div className='subsection-title'>Poster and Workshop</div>
+
+                <div className="poster">
+                    <div className="poster-content">
+                        <div className="poster-title">Moderating Customer Inquiries and Responses to Alleviate Stress and Reduce Emotional Dissonance of Customer Service Representatives</div>
+                        <div className='poster-info'>
+                            <div className="poster-author">Hyung-Kwon Ko, Kihoon Son, Hyoungwook Jin, <mark>Yoonseo Choi</mark>, Xiang Anthony Chen</div>
+                            <div className="poster-conf-link">
+                                <div className='poster-conf'>
+                                    <div className="poster-conf-content">CHI 2023 Generative AI and HCI workshop</div>
+                                </div>
+                                <div className="poster-link">
+                                    <a className = "each-link" href = "https://kixlab.github.io/website-files/2023/chi2023-workshop-customer-paper.pdf">Poster</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="poster">
                     <div className="poster-content">
                         <div className="poster-title">How Does Netflix “Understand” Me?: Exploring End-user Needs to Design Human-centered Explanations</div>
