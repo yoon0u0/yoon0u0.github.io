@@ -2,7 +2,7 @@ import { Stack, Box } from "@mui/material";
 import './profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faFile } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import ProfilePic from './IMG_1944.JPG'
 
@@ -91,8 +91,9 @@ function Profile({ sx, ...rest }) {
           </div>
           <div className="link">
             <div className="link-content">
-              <a className="link-icon" href="https://drive.google.com/file/d/1PidmCyRe3k6CMNePp2PuxBPJXb6MKhU8/view?usp=sharing">
-                <FontAwesomeIcon icon={faUser} fontSize={16} />
+              <a className="link-icon" href="https://drive.google.com/file/d/1ok3e126LaJwGFv-IopeEIvqRJS99AA-W/view?usp=sharing">
+                <FontAwesomeIcon icon={faFile} fontSize={16} />
+                {/* <FontAwesomeIcon icon="fa-solid fa-file" /> */}
               </a>
             </div>
           </div>

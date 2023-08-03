@@ -131,8 +131,8 @@ function Publications() {
                                     <div className='conf-content'>CHI 2021</div>
                                 </div>
                                 <div className="paper-link">
-                                    <a className = "each-link" href="https://kixlab.github.io/website-files/2021/cscw2021-CoSeq-paper.pdf">Paper</a> 
-                                    <a className = "each-link" href = "https://dl.acm.org/doi/10.1145/3449250">ACM DL</a> 
+                                    <a className = "each-link" href="https://kixlab.github.io/website-files/2021/chi2021-Winder-paper.pdf">Paper</a> 
+                                    <a className = "each-link" href = "https://dl.acm.org/doi/10.1145/3411764.3445686">ACM DL</a> 
                                     <a className = "each-link" href="https://winder.kixlab.org/">Project Website</a>
                                 </div>
                             </div>
@@ -199,6 +199,24 @@ function Publications() {
                                 </div>
                                 <div className="poster-link">
                                     <a className = "each-link" href = "https://kixlab.github.io/website-files/2023/chi2023-workshop-customer-paper.pdf">Poster</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="poster">
+                    <div className="poster-content">
+                        <div className="poster-title">Designing for AI-Powered Social Computing Systems</div>
+                        <div className='poster-info'>
+                            <div className="poster-author">Gionnieve Lim, Hyunwoo Kim, <mark>Yoonseo Choi</mark>, Toby Jia-Jun Li, Chinmay Kulkarni, Hariharan Subramonyam, Joseph Seering, Michael S Bernstein, Amy X Zhang, Elena L Glassman, Simon Perrault, Juho Kim</div>
+                            <div className="poster-conf-link">
+                                <div className='poster-conf'>
+                                    <div className="poster-conf-content">CSCW 2023 SIG Proposals</div>
+                                </div>
+                                <div className="poster-link">
+                                    <a className = "each-link" href = "https://kixlab.github.io/website-files/2023/cscw23-sig-CSCW2023SIG-workshop.pdf">SIG Proposal</a>
                                 </div>
                             </div>
                         </div>
