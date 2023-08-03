@@ -190,24 +190,6 @@ function Publications() {
 
                 <div className="poster">
                     <div className="poster-content">
-                        <div className="poster-title">Moderating Customer Inquiries and Responses to Alleviate Stress and Reduce Emotional Dissonance of Customer Service Representatives</div>
-                        <div className='poster-info'>
-                            <div className="poster-author">Hyung-Kwon Ko, Kihoon Son, Hyoungwook Jin, <mark>Yoonseo Choi</mark>, Xiang Anthony Chen</div>
-                            <div className="poster-conf-link">
-                                <div className='poster-conf'>
-                                    <div className="poster-conf-content">CHI 2023 Generative AI and HCI workshop</div>
-                                </div>
-                                <div className="poster-link">
-                                    <a className = "each-link" href = "https://kixlab.github.io/website-files/2023/chi2023-workshop-customer-paper.pdf">Poster</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="poster">
-                    <div className="poster-content">
                         <div className="poster-title">Designing for AI-Powered Social Computing Systems</div>
                         <div className='poster-info'>
                             <div className="poster-author">Gionnieve Lim, Hyunwoo Kim, <mark>Yoonseo Choi</mark>, Toby Jia-Jun Li, Chinmay Kulkarni, Hariharan Subramonyam, Joseph Seering, Michael S Bernstein, Amy X Zhang, Elena L Glassman, Simon Perrault, Juho Kim</div>
@@ -217,6 +199,23 @@ function Publications() {
                                 </div>
                                 <div className="poster-link">
                                     <a className = "each-link" href = "https://kixlab.github.io/website-files/2023/cscw23-sig-CSCW2023SIG-workshop.pdf">SIG Proposal</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="poster">
+                    <div className="poster-content">
+                        <div className="poster-title">Moderating Customer Inquiries and Responses to Alleviate Stress and Reduce Emotional Dissonance of Customer Service Representatives</div>
+                        <div className='poster-info'>
+                            <div className="poster-author">Hyung-Kwon Ko, Kihoon Son, Hyoungwook Jin, <mark>Yoonseo Choi</mark>, Xiang Anthony Chen</div>
+                            <div className="poster-conf-link">
+                                <div className='poster-conf'>
+                                    <div className="poster-conf-content">CHI 2023 Generative AI and HCI workshop</div>
+                                </div>
+                                <div className="poster-link">
+                                    <a className = "each-link" href = "https://kixlab.github.io/website-files/2023/chi2023-workshop-customer-paper.pdf">Poster</a>
                                 </div>
                             </div>
                         </div>
