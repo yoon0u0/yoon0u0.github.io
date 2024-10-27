@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { faUser, faFile } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import ProfilePic from './IMG_1944.JPG'
+import ProfilePic from './2024.jpg'
 
 function Profile({ sx, ...rest }) {
   return (
@@ -21,7 +21,11 @@ function Profile({ sx, ...rest }) {
         },
         gap: {
           md: 20 / 8
-        }
+        },
+        position: {sm: 'initial', md: 'sticky'},
+        top: 64,
+        height: 1,
+        
         // gap: 20 / 8
       }}
       {...rest}
