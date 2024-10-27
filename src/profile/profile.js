@@ -95,7 +95,7 @@ function Profile({ sx, ...rest }) {
           </div>
           <div className="link">
             <div className="link-content">
-              <a className="link-icon" href="https://drive.google.com/file/d/1ok3e126LaJwGFv-IopeEIvqRJS99AA-W/view?usp=sharing">
+              <a className="link-icon" href="https://drive.google.com/file/d/1F4BNBsL4aKrBRaNPJRcU6x4KS1hioK_p/view?usp=sharing">
                 <FontAwesomeIcon icon={faFile} fontSize={16} />
                 {/* <FontAwesomeIcon icon="fa-solid fa-file" /> */}
               </a>

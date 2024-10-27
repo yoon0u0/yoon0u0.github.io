@@ -3,6 +3,7 @@ import protochat_img from './protochat.jpeg'
 import winder_img from './winder.png'
 import stylette_img from './stylette.png'
 import creator_img from './creator.png'
+import onlinedating_img from './onlinedating.png'
 import { Stack, Box } from '@mui/material';
 
 function Publications() {
@@ -12,7 +13,46 @@ function Publications() {
             <div className="subsection">
                 <div className='subsection-title'>Paper</div>
                 <Stack gap={5}>
-                
+                <Stack
+                    flexDirection={{
+                        xs: 'column',
+                        sm: 'row'
+                    }}
+                    gap={{
+                        xs: 20/8,
+                        sm: 20/8
+                    }}
+                >
+                    <Box sx={{
+                        width: {
+                            xs: 'auto',
+                            sm: 208
+                        },
+                        height: 128.62,
+                        textAlign: {
+                            xs: 'center',
+                            sm: 'left'
+                        },
+                        flexShrink: 0,
+                    }}>
+                        <img className = "img" src={onlinedating_img} />
+                    </Box>
+                    <div className='paper-content'>
+                        <div className="title">Beyond Swipes and Scores: Investigating Practices, Challenges and User- Centered Values in Online Dating Algorithms</div>
+                        <div className='info'>
+                            <div className="author">Chowon Kang, <mark>Yoonseo Choi</mark>, Yongjae Sohn, Hyunseung Lim, Hwajung Hong</div>
+                            <div className="conf-link">
+                                <div className="conf">
+                                    <div className='conf-content'>CSCW 2024</div>
+                                </div>
+                                <div className="paper-link">
+                                    <a className = "each-link" href = "">Paper</a>
+                                    <a className = "each-link" href = "">ACM DL</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Stack>
                 <Stack
                     flexDirection={{
                         xs: 'column',
@@ -187,6 +227,40 @@ function Publications() {
 
             <div className="subsection">
                 <div className='subsection-title'>Poster and Workshop</div>
+
+                <div className="poster">
+                    <div className="poster-content">
+                        <div className="poster-title">Investigating How People Perceive AI-Generated Responses in Social Q&A</div>
+                        <div className='poster-info'>
+                            <div className="poster-author">Hyunwoo Kim*, <mark>Yoonseo Choi*</mark>, Minsu Park</div>
+                            <div className="poster-conf-link">
+                                <div className='poster-conf'>
+                                    <div className="poster-conf-content">CSCW 2024 Workshop: Envisioning New Futures of Positive Social Technology</div>
+                                </div>
+                                <div className="poster-link">
+                                    <a className = "each-link" href = "">Poster</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="poster">
+                    <div className="poster-content">
+                        <div className="poster-title">Using LLMs to Investigate Correlations of Conversational Follow-up Queries with User Satisfaction</div>
+                        <div className='poster-info'>
+                            <div className="poster-author">Hyunwoo Kim*, <mark>Yoonseo Choi*</mark>, Taehyun Yang, Honggu Lee, Chaneon Park, Yongju Lee, Jin Young Kim, Juho Kim (*equally contributed)</div>
+                            <div className="poster-conf-link">
+                                <div className='poster-conf'>
+                                    <div className="poster-conf-content">SIGIR 2024 Workshop on Large Language Models for Evaluation in Information Retrieval</div>
+                                </div>
+                                <div className="poster-link">
+                                    <a className = "each-link" href = "https://kixlab.github.io/website-files/2024/sigir2024-workshop-searchgpt.pdf">Poster</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div className="poster">
                     <div className="poster-content">
