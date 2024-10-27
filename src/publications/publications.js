@@ -232,7 +232,7 @@ function Publications() {
                     <div className="poster-content">
                         <div className="poster-title">Investigating How People Perceive AI-Generated Responses in Social Q&A</div>
                         <div className='poster-info'>
-                            <div className="poster-author">Hyunwoo Kim*, <mark>Yoonseo Choi*</mark>, Minsu Park</div>
+                            <div className="poster-author">Hyunwoo Kim, <mark>Yoonseo Choi</mark>, Minsu Park</div>
                             <div className="poster-conf-link">
                                 <div className='poster-conf'>
                                     <div className="poster-conf-content">CSCW 2024 Workshop: Envisioning New Futures of Positive Social Technology</div>
