@@ -71,8 +71,10 @@ function Profile({ sx, ...rest }) {
         <div className="name">Yoonseo Choi</div>
         <div className="intro">
           I'm Yoonseo Choi, a Ph.D. student at KAIST, working with Prof. Juho Kim.
-          I'm interested in research related to supporting the creator's algorithmic experience under the situation of an algorithmic black box. 
-          The overarching goal of my research is to enhance HAI collaboration in algorithmic platforms in the context of the creator economy.
+          My research centers around developing systems that simulate feedback to support users, 
+          focusing on enhancing creative content development and delivering user-centered AI results (e.g., search, music recommendation).
+          {/* I'm interested in research related to supporting the creator's algorithmic experience under the situation of an algorithmic black box. 
+          The overarching goal of my research is to enhance HAI collaboration in algorithmic platforms in the context of the creator economy. */}
           {/* I’m doing research in HCI with high interests in Human-AI collaboration, creator economy platform, algorithmic experience, and iterative design process.
           I am studying how AI algorithms underlying various online platforms affect multiple stakeholders (e.g., creator, viewer, advertiser), 
           how they can use these algorithms for their platform activities, and furthermore, happily 'collaborate' with algorithms.*/}
