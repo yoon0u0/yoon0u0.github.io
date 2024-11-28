@@ -46,8 +46,8 @@ function Publications() {
                                     <div className='conf-content'>CSCW 2024</div>
                                 </div>
                                 <div className="paper-link">
-                                    <a className = "each-link" href = "">Paper</a>
-                                    <a className = "each-link" href = "">ACM DL</a> 
+                                    <a className = "each-link" href = "https://drive.google.com/file/d/1n2r6IJqb4F5PVJYqB9Ymm3jEkI13XH3V/view?usp=sharing">Paper</a>
+                                    <a className = "each-link" href = "https://dl.acm.org/doi/10.1145/3687025">ACM DL</a> 
                                 </div>
                             </div>
                         </div>
@@ -238,7 +238,7 @@ function Publications() {
                                     <div className="poster-conf-content">CSCW 2024 Workshop: Envisioning New Futures of Positive Social Technology</div>
                                 </div>
                                 <div className="poster-link">
-                                    <a className = "each-link" href = "">Poster</a>
+                                    <a className = "each-link" href = "https://drive.google.com/file/d/19lOdn3gv3k3EX1QUBayfXpqwqM91HiKs/view?usp=sharing">Poster</a>
                                 </div>
                             </div>
                         </div>
