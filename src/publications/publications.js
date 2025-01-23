@@ -39,7 +39,7 @@ function Publications() {
                         <img className = "img" src={proxona_img} />
                     </Box>
                     <div className='paper-content'>
-                        <div className="title">Proxona: Leveraging LLM-Driven Personas to Enhance Creators' Understanding of Their Audience</div>
+                        <div className="title">Proxona: Supporting Creators' Sensemaking and Ideation with LLM-Powered Audience Personas</div>
                         <div className='info'>
                             <div className="author"><mark>Yoonseo Choi</mark>, Eun Jeong Kang, Seulgi Choi, Min Kyung Lee, Juho Kim</div>
                             <div className="conf-link">
@@ -47,7 +47,7 @@ function Publications() {
                                     <div className='conf-content'>CHI 2025 (Conditionally Accepted)</div>
                                 </div>
                                 <div className="paper-link">
-                                    <a className = "each-link" href = "https://arxiv.org/abs/2408.10937">arXiv</a> 
+                                    <a className = "each-link" href = "https://arxiv.org/abs/2408.10937">arXiv version</a> 
                                 </div>
                             </div>
                         </div>
