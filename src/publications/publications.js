@@ -44,10 +44,10 @@ function Publications() {
                             <div className="author"><mark>Yoonseo Choi</mark>, Eun Jeong Kang, Seulgi Choi, Min Kyung Lee, Juho Kim</div>
                             <div className="conf-link">
                                 <div className="conf">
-                                    <div className='conf-content'>CHI 2025 (Conditionally Accepted)</div>
+                                    <div className='conf-content'>CHI 2025</div>
                                 </div>
                                 <div className="paper-link">
-                                    <a className = "each-link" href = "https://arxiv.org/abs/2408.10937">arXiv version</a> 
+                                    <a className = "each-link" href = "https://arxiv.org/abs/2408.10937">arXiv</a> 
                                 </div>
                             </div>
                         </div>
