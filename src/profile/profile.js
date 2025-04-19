@@ -2,9 +2,9 @@ import { Stack, Box } from "@mui/material";
 import './profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faFile } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import ProfilePic from './IMG_1944.JPG'
+import ProfilePic from './2024.jpg'
 
 function Profile({ sx, ...rest }) {
   return (
@@ -20,8 +20,12 @@ function Profile({ sx, ...rest }) {
           md: 206
         },
         gap: {
-          md: 20 / 8 
-        }
+          md: 20 / 8
+        },
+        position: {sm: 'initial', md: 'sticky'},
+        top: 64,
+        height: 1,
+        
         // gap: 20 / 8
       }}
       {...rest}
@@ -47,12 +51,12 @@ function Profile({ sx, ...rest }) {
         flexShrink: 0,
         // backgroundImage: `url(${ProfilePic})`,
         // backgroundSize: 'contain'
-      }}> 
+      }}>
         <Box sx={{
           width: '100%',
           paddingTop: '100%',
           backgroundImage: `url(${ProfilePic})`,
-        backgroundSize: 'contain'
+          backgroundSize: 'contain'
         }}></Box>
       </Box>
       <Stack
@@ -66,10 +70,14 @@ function Profile({ sx, ...rest }) {
 
         <div className="name">Yoonseo Choi</div>
         <div className="intro">
-          I’m Yoonseo Choi, a Ph.D. student at KAIST, working with Prof. Juho Kim.
-          I’m doing research in HCI with high interests in Human-AI collaboration, creator economy platform, algorithmic experience, and iterative design process.
+          I'm Yoonseo Choi, a Ph.D. student at KAIST, working with Prof. Juho Kim.
+          My research centers around developing systems that simulate feedback to support users, 
+          focusing on enhancing creative content development and delivering user-centered AI results (e.g., search, music recommendation).
+          {/* I'm interested in research related to supporting the creator's algorithmic experience under the situation of an algorithmic black box. 
+          The overarching goal of my research is to enhance HAI collaboration in algorithmic platforms in the context of the creator economy. */}
+          {/* I’m doing research in HCI with high interests in Human-AI collaboration, creator economy platform, algorithmic experience, and iterative design process.
           I am studying how AI algorithms underlying various online platforms affect multiple stakeholders (e.g., creator, viewer, advertiser), 
-          how they can use these algorithms for their platform activities, and furthermore, happily 'collaborate' with algorithms. 
+          how they can use these algorithms for their platform activities, and furthermore, happily 'collaborate' with algorithms.*/}
         </div>
         <div className="external-link">
           <div className="link">
@@ -89,8 +97,9 @@ function Profile({ sx, ...rest }) {
           </div>
           <div className="link">
             <div className="link-content">
-              <a className="link-icon" href="https://drive.google.com/file/d/1PidmCyRe3k6CMNePp2PuxBPJXb6MKhU8/view?usp=sharing">
-                <FontAwesomeIcon icon={faUser} fontSize={16} />
+              <a className="link-icon" href="https://drive.google.com/file/d/1E-ZsX82rZF_T8t5O93oLozgE9HvjanGl/view?usp=sharing">
+                <FontAwesomeIcon icon={faFile} fontSize={16} />
+                {/* <FontAwesomeIcon icon="fa-solid fa-file" /> */}
               </a>
             </div>
           </div>
