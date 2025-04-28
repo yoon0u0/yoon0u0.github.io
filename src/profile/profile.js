@@ -70,9 +70,15 @@ function Profile({ sx, ...rest }) {
 
         <div className="name">Yoonseo Choi</div>
         <div className="intro">
+          <div className='tag'>I'm in Yokohama for #CHI2025 to present my work <a href="https://proxona.kixlab.org">Proxona</a>! Feel free to say hi and happy to chat! </div>
+          <br></br>
           I'm Yoonseo Choi, a Ph.D. student at KAIST, working with Prof. Juho Kim.
           My research centers around developing systems that simulate feedback to support users, 
-          focusing on enhancing creative content development and delivering user-centered AI results (e.g., search, music recommendation).
+          focusing on understading and supporting AI experiences (e.g., creator economy platforms) and delivering user-centered AI results (e.g., search, music recommendation).
+          <br></br>
+          <br></br>
+          I'm interested in prototyping users with data-driven approaches, and providing them for enhancing interpretability.
+          <br></br>
           {/* I'm interested in research related to supporting the creator's algorithmic experience under the situation of an algorithmic black box. 
           The overarching goal of my research is to enhance HAI collaboration in algorithmic platforms in the context of the creator economy. */}
           {/* I’m doing research in HCI with high interests in Human-AI collaboration, creator economy platform, algorithmic experience, and iterative design process.
