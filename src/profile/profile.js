@@ -2,7 +2,7 @@ import { Stack, Box } from "@mui/material";
 import './profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
-import { faUser, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faFile, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import ProfilePic from './2024.jpg'
 
@@ -70,14 +70,14 @@ function Profile({ sx, ...rest }) {
 
         <div className="name">Yoonseo Choi</div>
         <div className="intro">
-          <div className='tag'>I'm in Yokohama for #CHI2025 to present my work <a href="https://proxona.kixlab.org">Proxona</a>! Feel free to say hi and happy to chat! </div>
+          {/* <div className='tag'>I'm in Yokohama for #CHI2025 to present my work <a href="https://proxona.kixlab.org">Proxona</a>! Feel free to say hi and happy to chat! </div> */}
           <br></br>
           I'm Yoonseo Choi, a Ph.D. student at KAIST, working with Prof. Juho Kim.
           My research centers around developing systems that simulate feedback to support users, 
           focusing on understading and supporting AI experiences (e.g., creator economy platforms) and delivering user-centered AI results (e.g., search, music recommendation).
           <br></br>
           <br></br>
-          I'm interested in prototyping users with data-driven approaches, and providing them for enhancing interpretability.
+          <div className='tag'>I'm interested in prototyping users with data-driven approaches, and providing them for enhancing interpretability.</div>
           <br></br>
           {/* I'm interested in research related to supporting the creator's algorithmic experience under the situation of an algorithmic black box. 
           The overarching goal of my research is to enhance HAI collaboration in algorithmic platforms in the context of the creator economy. */}
@@ -103,8 +103,8 @@ function Profile({ sx, ...rest }) {
           </div>
           <div className="link">
             <div className="link-content">
-              <a className="link-icon" href="https://drive.google.com/file/d/1E-ZsX82rZF_T8t5O93oLozgE9HvjanGl/view?usp=sharing">
-                <FontAwesomeIcon icon={faFile} fontSize={16} />
+              <a className="link-icon" href="https://drive.google.com/file/d/1fwf8dq9wMo2f5NGFBqtBTOVGdZB-wqSQ/view?usp=sharing">
+                <FontAwesomeIcon icon={faFilePdf} fontSize={16} />
                 {/* <FontAwesomeIcon icon="fa-solid fa-file" /> */}
               </a>
             </div>
