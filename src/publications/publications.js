@@ -1,4 +1,5 @@
 import './publications.css';
+import empty_img from './empty.png'
 import protochat_img from './protochat.jpeg'
 import winder_img from './winder.png'
 import stylette_img from './stylette.png'
@@ -14,6 +15,44 @@ function Publications() {
             <div className="subsection">
                 <div className='subsection-title'>Paper</div>
                 <Stack gap={5}>
+                                <Stack
+                    flexDirection={{
+                        xs: 'column',
+                        sm: 'row'
+                    }}
+                    gap={{
+                        xs: 20/8,
+                        sm: 20/8
+                    }}
+                >
+                    <Box sx={{
+                        width: {
+                            xs: 'auto',
+                            sm: 208
+                        },
+                        height: 128.62,
+                        textAlign: {
+                            xs: 'center',
+                            sm: 'left'
+                        },
+                        flexShrink: 0,
+                    }}>
+                        <img className = "img" src={empty_img} />
+                    </Box>
+                    <div className='paper-content'>
+                        <div className="title">BloomIntent: A Multi-Intent Framework for LLM-Based Automated Search Quality Evaluation</div>
+                        <div className='info'>
+                            <div className="author"><mark>Yoonseo Choi</mark>, Eunhye Kim, Hyunwoo Kim, Donghyun Park, Honggu Lee, Jinyoung Kim, Juho Kim</div>
+                            <div className="conf-link">
+                                <div className="conf">
+                                    <div className='conf-content'>UIST 2025 Conditionally Accepted</div>
+                                </div>
+                                <div className="paper-link">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Stack>
                 <Stack
                     flexDirection={{
                         xs: 'column',
