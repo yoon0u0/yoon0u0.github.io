@@ -15,7 +15,7 @@ function Publications() {
             <div className="subsection">
                 <div className='subsection-title'>Paper</div>
                 <Stack gap={5}>
-                                <Stack
+                {/* <Stack
                     flexDirection={{
                         xs: 'column',
                         sm: 'row'
@@ -52,7 +52,7 @@ function Publications() {
                             </div>
                         </div>
                     </div>
-                </Stack>
+                </Stack> */}
                 <Stack
                     flexDirection={{
                         xs: 'column',
