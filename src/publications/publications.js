@@ -15,7 +15,7 @@ function Publications() {
             <div className="subsection">
                 <div className='subsection-title'>Paper</div>
                 <Stack gap={5}>
-                {/* <Stack
+                <Stack
                     flexDirection={{
                         xs: 'column',
                         sm: 'row'
@@ -40,19 +40,22 @@ function Publications() {
                         <img className = "img" src={empty_img} />
                     </Box>
                     <div className='paper-content'>
-                        <div className="title">BloomIntent: A Multi-Intent Framework for LLM-Based Automated Search Quality Evaluation</div>
+                        <div className="title">BloomIntent: Automating Search Evaluation with LLM-Generated Fine-Grained User Intents</div>
                         <div className='info'>
-                            <div className="author"><mark>Yoonseo Choi</mark>, Eunhye Kim, Hyunwoo Kim, Donghyun Park, Honggu Lee, Jinyoung Kim, Juho Kim</div>
+                            <div className="author"><mark>Yoonseo Choi</mark>, Eunhye Kim, Hyunwoo Kim, Donghyun Park, Honggu Lee, Jin Young Kim, Juho Kim</div>
                             <div className="conf-link">
                                 <div className="conf">
-                                    <div className='conf-content'>UIST 2025 Conditionally Accepted</div>
+                                    <div className='conf-content'>UIST 2025</div>
                                 </div>
                                 <div className="paper-link">
+                                    <a className = "each-link" href = "https://drive.google.com/file/d/1bBEDbTYgB7yEmCxGxgIKJRnwFa6sLmpr/view?usp=sharing">Paper</a> 
+                                    <a className = "each-link" href = "">ACM DL</a> 
+                                    <a className = "each-link" href = "">Project Website</a> 
                                 </div>
                             </div>
                         </div>
                     </div>
-                </Stack> */}
+                </Stack>
                 <Stack
                     flexDirection={{
                         xs: 'column',
