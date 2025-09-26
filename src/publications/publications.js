@@ -50,7 +50,7 @@ function Publications() {
                                 <div className="paper-link">
                                     <a className = "each-link" href = "https://drive.google.com/file/d/1bBEDbTYgB7yEmCxGxgIKJRnwFa6sLmpr/view?usp=sharing">Paper</a> 
                                     <a className = "each-link" href = "">ACM DL</a> 
-                                    <a className = "each-link" href = "">Project Website</a> 
+                                    <a className = "each-link" href = "https://bloomintent.kixlab.org">Project Website</a> 
                                 </div>
                             </div>
                         </div>

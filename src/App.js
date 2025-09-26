@@ -4,6 +4,8 @@ import Profile from './profile/profile';
 import Publications from './publications/publications';
 import Services from './services/services';
 import Education from './education/education'
+import News from './news/news'
+
 import { Stack } from '@mui/material';
 import { Box } from '@mui/system';
 
@@ -37,6 +39,7 @@ function App() {
         }}
         gap={50/8}
       >
+          <News></News>
           <Publications></Publications>
           <Services></Services>
           <Education></Education>

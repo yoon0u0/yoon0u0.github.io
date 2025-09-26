@@ -77,7 +77,9 @@ function Profile({ sx, ...rest }) {
           focusing on understading and supporting AI experiences (e.g., creator economy platforms) and delivering user-centered AI results (e.g., search, music recommendation).
           <br></br>
           <br></br>
-          <div className='tag'>I'm interested in prototyping users with data-driven approaches, and providing them for enhancing interpretability.</div>
+
+
+          {/* <div className='tag'>I'm interested in prototyping users with data-driven approaches, and providing them for enhancing interpretability.</div> */}
           <br></br>
           {/* I'm interested in research related to supporting the creator's algorithmic experience under the situation of an algorithmic black box. 
           The overarching goal of my research is to enhance HAI collaboration in algorithmic platforms in the context of the creator economy. */}
