@@ -95,3 +95,12 @@
     font-size: 20px;
     color: black;
 }
+
+.link-cv {
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+
+}
