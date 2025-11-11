@@ -6,6 +6,10 @@ function Services() {
         <div className="section-title">Services</div>
         <div className="service-all">
             <div className="item">
+                <div className="category">Organizing</div>
+                <div className="content">CSCW 2026 Paper, Festival of Learing 2026</div>
+            </div>
+            <div className="item">
                 <div className="category">AC</div>
                 <div className="content">CHI 2023 LBW, CHI 2022 LBW, CSCW 2022 Poster</div>
             </div>
