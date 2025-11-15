@@ -6,6 +6,8 @@ import stylette_img from './stylette.png'
 import creator_img from './creator.png'
 import onlinedating_img from './onlinedating.png'
 import proxona_img from './proxona.png'
+import bloomintent_img from './bloomintent.png'
+
 import { Stack, Box } from '@mui/material';
 
 function Publications() {
@@ -37,7 +39,7 @@ function Publications() {
                         },
                         flexShrink: 0,
                     }}>
-                        <img className = "img" src={empty_img} />
+                        <img className = "img" src={bloomintent_img} />
                     </Box>
                     <div className='paper-content'>
                         <div className="title">BloomIntent: Automating Search Evaluation with LLM-Generated Fine-Grained User Intents</div>

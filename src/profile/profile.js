@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { faUser, faFile, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import ProfilePic from './2024.jpg'
 
 function Profile({ sx, ...rest }) {
@@ -22,10 +23,10 @@ function Profile({ sx, ...rest }) {
         gap: {
           md: 20 / 8
         },
-        position: {sm: 'initial', md: 'sticky'},
+        position: { sm: 'initial', md: 'sticky' },
         top: 64,
         height: 1,
-        
+
         // gap: 20 / 8
       }}
       {...rest}
@@ -73,14 +74,14 @@ function Profile({ sx, ...rest }) {
           {/* <div className='tag'>I'm in Yokohama for #CHI2025 to present my work <a href="https://proxona.kixlab.org">Proxona</a>! Feel free to say hi and happy to chat! </div> */}
           <br></br>
           I'm Yoonseo Choi, a Ph.D. student at KAIST, working with Prof. Juho Kim.
-          My research centers around developing systems that simulate feedback to support users, 
-          focusing on understading and supporting AI experiences (e.g., creator economy platforms) and delivering user-centered AI results (e.g., search, music recommendation).
           <br></br>
           <br></br>
-
-
+          I explore how user perspectives can be represented, interpreted, and integrated throughout the lifecycle of AI-mediated systems.<br></br>
+          My research develops generative, data-grounded representations of users’ intents and experiences that help practitioners understand diverse user needs and anticipate their impact at scale. <br></br>
+          <br></br>
+          I apply this approach broadly across creator ecosystems, search and recommendation, and emerging interactive environments --- to advance more user-centered and responsible AI.<br></br>
+          <br></br>
           {/* <div className='tag'>I'm interested in prototyping users with data-driven approaches, and providing them for enhancing interpretability.</div> */}
-          <br></br>
           {/* I'm interested in research related to supporting the creator's algorithmic experience under the situation of an algorithmic black box. 
           The overarching goal of my research is to enhance HAI collaboration in algorithmic platforms in the context of the creator economy. */}
           {/* I’m doing research in HCI with high interests in Human-AI collaboration, creator economy platform, algorithmic experience, and iterative design process.
@@ -100,7 +101,12 @@ function Profile({ sx, ...rest }) {
           </div>
           <div className="link">
             <div className="link-content">
-              <a className="link-icon" href="mailto:yoon0u0@gmail.com"><FontAwesomeIcon icon={faEnvelope} fontSize={20} /></a>
+              <a className="link-icon" href="mailto:yoon0u0@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+            </div>
+          </div>
+          <div className="link">
+            <div className="link-content">
+              <a className="link-icon" href="https://scholar.google.com/citations?hl=en&user=ubElnC4AAAAJ"><FontAwesomeIcon icon={faGraduationCap} /></a>
             </div>
           </div>
           <div className="link">
@@ -112,6 +118,7 @@ function Profile({ sx, ...rest }) {
               </a>
             </div>
           </div>
+
         </div>
       </Stack>
     </Stack>

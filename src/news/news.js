@@ -12,9 +12,8 @@
 //       </div>
 //     );
 //   }
-  
-// export default News;
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import './news.css';
 
 function News() {
@@ -43,7 +42,11 @@ function News() {
         </p>
 
         <p className="news-p">
-          She’s interested in industry positions — let’s have a chat! 🗣️
+          She’s interested in industry & postdoc positions — let’s have a chat! 🗣️
+        </p>
+
+        <p className="mail-p">
+          <FontAwesomeIcon icon={faEnvelope} />    yoon0u0@gmail.com
         </p>
       </div>
     </div>

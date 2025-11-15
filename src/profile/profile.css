@@ -65,13 +65,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 15px;
     gap: 10px;
 
     width: 30px;
     height: 30px;
 
-    background: linear-gradient(0deg, #F3F9F5, #F3F9F5), #18A0FB;
+    background: linear-gradient(0deg, #F3F9F5, #F3F9F5), #6418fb;
     border-radius: 4px;
 
     /* Inside auto layout */
@@ -79,6 +79,11 @@
     
     order: 0;
     flex-grow: 0;
+}
+
+.link:hover {
+    background-color: #6418fb;
+    color: white;
 }
 
 .link-content {
