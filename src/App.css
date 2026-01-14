@@ -15,3 +15,15 @@
     top: 64px;
 
 }
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; 
+    color: #e2e8f0;            
+  }
+
+  #root, .App {
+    background-color: #121212;
+    min-height: 100vh;
+  }
+} */

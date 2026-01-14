@@ -124,7 +124,7 @@
 }
 
 /* ---------------- Dark mode ---------------- */
-@media (prefers-color-scheme: dark){
+/* @media (prefers-color-scheme: dark){
   .section-title{ color:#e5e7eb; }
   .news-callout{
     border-color:#1f2937;
@@ -139,4 +139,38 @@
   .news-p{ color:#cbd5e1; }
   .btn-ghost{ color:#e5e7eb; background:#0f172a; border-color:#1f2937; }
   .btn-line{ color:#e5e7eb; border-color:#334155; }
-}
+} */
+
+/* ---------------- Dark mode ----------------
+@media (prefers-color-scheme: dark){
+  
+  .news-callout{
+    border-color:#2d2d3d; 
+    background:
+      linear-gradient(180deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.0) 55%),
+      #121212; 
+    box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+  }
+
+  .news-callout::before{ opacity:1; }
+  
+  .news-headline { color: #a78bfa; } 
+
+  .news-p { color: #cbd5e1; }
+
+  .text-emph {
+    color: #ffffff !important;
+  }
+
+  .mail-p {
+    color: #e2e8f0;
+  }
+
+  .proxona-text, .bloomintent-text {
+    color: #8ab4f8; 
+    font-weight: 600;
+  }
+  
+  .news-tag { color:#c7d2fe; background:#312e81; border-color:#3730a3; }
+  .btn-ghost { color:#e5e7eb; background:#1e293b; border-color:#334155; }
+} */

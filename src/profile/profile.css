@@ -109,3 +109,32 @@
     color: black;
 
 }
+/* 
+@media (prefers-color-scheme: dark) {
+  html, body, #root, .App {
+    background-color: #121212 !important;
+    color: #e2e8f0;
+  } 
+
+  .name {
+    color: #f8fafc !important; 
+  }
+
+  .intro {
+    color: #94a3b8 !important; 
+  }
+
+  .link {
+    background: #1e293b !important; 
+    border: 1px solid #334155;
+  }
+
+  .link-icon, .link-cv {
+    color: #f1f5f9 !important; 
+  } 
+
+  .link:hover {
+    background-color: #6418fb !important;
+  } 
+}
+*/
