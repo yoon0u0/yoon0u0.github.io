@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-5P0ZK3RJFL"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-5P0ZK3RJFL")</script><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="I’m a final-year Ph.D. candidate in the School of Computing at KAIST, advised by Juho Kim. My thesis builds generative user proxies: data-grounded personas and intents that help teams understand users at scale."><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="en"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-5P0ZK3RJFL"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-5P0ZK3RJFL")</script><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="I’m a final-year Ph.D. candidate in the School of Computing at KAIST, advised by Juho Kim. My thesis builds generative user proxies: interactive, data-grounded personas and intents that help teams understand users at scale."><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Yoonseo Choi</title>
 <link rel="icon" href="/cat_ghost_halloween_22016.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
   --bg:#FFFFFF; --fg:#16181D; --muted:#555B67; --faint:#767C88; --line:#E4E6EB; --wash:#F4F5F9;
   --accent:#A4502A; --accent-strong:#7E3A1C; --accent-wash:#FBEFE8; --accent-line:#EBC9B6;
   --award:#875700; --award-wash:#FBF2DC;
-  --header-bg:rgba(255,255,255,.94); --tea:#557E2E;
+  --header-bg:rgba(255,255,255,.94); --tea:#557E2E; --coffee:#7A4A2A;
   --serif:"EB Garamond", Georgia, "Times New Roman", serif;
   --sans:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -22,7 +22,7 @@
     --bg:#14161B; --fg:#ECEDEF; --muted:#A6ABB5; --faint:#8A8F99; --line:#2A2E36; --wash:#1C1F26;
     --accent:#E8A67F; --accent-strong:#F4C8AE; --accent-wash:#3A2418; --accent-line:#6B3E28;
     --award:#F2C66D; --award-wash:#3A2F14;
-    --header-bg:rgba(20,22,27,.9); --tea:#9CCB6A;
+    --header-bg:rgba(20,22,27,.9); --tea:#9CCB6A; --coffee:#D9A57A;
   }
 }
 :root[data-theme="dark"]{
@@ -30,7 +30,7 @@
   --bg:#14161B; --fg:#ECEDEF; --muted:#A6ABB5; --faint:#8A8F99; --line:#2A2E36; --wash:#1C1F26;
   --accent:#E8A67F; --accent-strong:#F4C8AE; --accent-wash:#3A2418; --accent-line:#6B3E28;
   --award:#F2C66D; --award-wash:#3A2F14;
-  --header-bg:rgba(20,22,27,.9); --tea:#9CCB6A;
+  --header-bg:rgba(20,22,27,.9); --tea:#9CCB6A; --coffee:#D9A57A;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -77,10 +77,10 @@ main .wrap{display:flex;flex-direction:column;gap:64px;padding-block:48px 96px}
 .dog-word{color:var(--fg);border-bottom:1.5px dashed #B8432A;cursor:pointer;outline-offset:2px}
 .dog-word:focus-visible{outline:2px solid #B8432A;border-radius:2px}
 .dog-walker{position:absolute;left:0;top:0;width:60px;height:auto;opacity:0;pointer-events:none;z-index:2}
-.dog-walker svg{display:block}
+.dog-walker .dog{display:block;overflow:visible}
 .dog-walker .dog-name{display:block;margin-top:1px;padding-right:6px;text-align:center;font-family:var(--serif);font-style:italic;font-size:12px;line-height:1.1;color:var(--muted);white-space:nowrap}
 .dog-walker.walk{animation:dogwalk 3.4s linear forwards}
-.dog-walker.walk svg{animation:dogbob .3s ease-in-out infinite alternate}
+.dog-walker.walk .dog{animation:dogbob .3s ease-in-out infinite alternate}
 .dog-walker .leg-a,.dog-walker .leg-b,.dog-walker .tail{transform-box:fill-box}
 .dog-walker .leg-a,.dog-walker .leg-b{transform-origin:50% 0}
 .dog-walker .tail{transform-origin:100% 100%}
@@ -92,7 +92,7 @@ main .wrap{display:flex;flex-direction:column;gap:64px;padding-block:48px 96px}
 @keyframes dogleg{from{transform:rotate(20deg)}to{transform:rotate(-20deg)}}
 @keyframes dogwag{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
 @keyframes dogfade{0%,100%{opacity:0}15%,85%{opacity:1}}
-/* easter egg: hover "sipping tea" for a pour and a little steam */
+/* easter egg: hover "sipping coffee or tea" for a pour and a little steam */
 .tea-word{color:transparent;-webkit-text-fill-color:transparent;background-image:linear-gradient(to top, var(--tea) 50%, var(--muted) 50%);background-size:100% 200%;background-position:0 0;-webkit-background-clip:text;background-clip:text;border-bottom:1.5px dashed #7FA34F;cursor:pointer;outline-offset:2px;transition:background-position 1.4s ease-in-out}
 .tea-word.filled{background-position:0 100%}
 .tea-word:focus-visible{outline:2px solid #7FA34F;border-radius:2px}
@@ -127,7 +127,7 @@ main .wrap{display:flex;flex-direction:column;gap:64px;padding-block:48px 96px}
 @keyframes yogapose{0%,16.6%{opacity:1}16.7%,100%{opacity:0}}
 @keyframes yogashow{0%{opacity:0;transform:translateY(4px)}5%{opacity:1;transform:translateY(0)}95%{opacity:1}100%{opacity:0}}
 @media (prefers-reduced-motion: reduce){.yoga-pal.on{animation:dogfade 2.2s linear forwards}.yoga-pal.on .pose{animation:none}.yoga-pal.on.v1 .p4{opacity:1}}
-@media (prefers-reduced-motion: reduce){.dog-walker.walk{animation:dogfade 2s linear forwards}.dog-walker.walk svg,.dog-walker.walk .leg-a,.dog-walker.walk .leg-b,.dog-walker.walk .tail{animation:none}}
+@media (prefers-reduced-motion: reduce){.dog-walker.walk{animation:dogfade 2s linear forwards}.dog-walker.walk .dog,.dog-walker.walk .leg-a,.dog-walker.walk .leg-b,.dog-walker.walk .tail{animation:none}}
 .photo-col{flex:0 0 210px;max-width:100%;display:flex;flex-direction:column;gap:16px}
 .photo{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--wash);border-radius:12px}
 .bubble{position:relative;display:flex;flex-direction:column;gap:2px;background:#FFF0BF;border:1.5px solid #1B1B1B;border-radius:14px;padding:12px 30px 12px 14px;color:#33363F;font-size:13px;line-height:1.45;transform:rotate(-1.5deg);transition:transform .2s ease}
@@ -235,21 +235,124 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
 /* easter egg variants: each hover plays the next of three */
 .dog-heart{position:absolute;right:0;top:-12px;opacity:0}
 .dog-walker.v2.walk{animation:dogzoom 2.8s ease-in-out forwards}
-.dog-walker.v2.walk svg{animation-duration:.15s}
+.dog-walker.v2.walk .dog{animation-duration:.15s}
 .dog-walker.v2.walk .leg-a,.dog-walker.v2.walk .leg-b{animation-duration:.13s}
 .dog-walker.v2.walk .dog-name{animation:dogflip 2.8s ease-in-out forwards}
 .dog-walker.v3.walk{animation:dogsit 3s ease-out forwards}
-.dog-walker.v3.walk svg,.dog-walker.v3.walk .leg-a,.dog-walker.v3.walk .leg-b{animation:none}
+.dog-walker.v3.walk .dog,.dog-walker.v3.walk .leg-a,.dog-walker.v3.walk .leg-b{animation:none}
 .dog-walker.v3.walk .tail{animation-duration:.12s}
 .dog-walker.v3.walk .dog-heart{animation:dogheart 3s ease-out}
 @keyframes dogzoom{0%{opacity:0;transform:translateX(0) scaleX(1)}5%{opacity:1}46%{transform:translateX(var(--dist,360px)) scaleX(1)}50%{transform:translateX(var(--dist,360px)) scaleX(-1)}94%{opacity:1}100%{opacity:0;transform:translateX(0) scaleX(-1)}}
 @keyframes dogflip{0%,46%{transform:scaleX(1)}50%,100%{transform:scaleX(-1)}}
 @keyframes dogsit{0%{opacity:0;transform:translateX(var(--mid,150px)) translateY(4px)}12%{opacity:1;transform:translateX(var(--mid,150px)) translateY(0)}88%{opacity:1;transform:translateX(var(--mid,150px))}100%{opacity:0;transform:translateX(var(--mid,150px))}}
 @keyframes dogheart{0%,25%{opacity:0;transform:translateY(4px) scale(.6)}35%{opacity:1;transform:translateY(0) scale(1.15)}70%{opacity:1;transform:translateY(-6px) scale(1)}100%{opacity:0;transform:translateY(-12px)}}
+
+/* dog variants 4-10: fetch, nap, hop, tail-chase, woof, sniff, peek-a-boo */
+.dog-walker .shut,.dog-walker .tongue{opacity:0}
+.dog-walker .head{transform-box:view-box}
+.dog-ball,.dog-flower{position:absolute;left:0;top:0;opacity:0;pointer-events:none;z-index:2}
+.dog-ball svg,.dog-flower svg{display:block}
+.dog-ball.on{animation:dxbx 3.4s linear forwards}.dog-ball.on svg{animation:dxbb 3.4s forwards}
+@keyframes dxbx{0%{opacity:0;transform:translateX(62px)}4%{opacity:1}50%,88%{opacity:1;transform:translateX(calc(var(--dist,360px) - 4px))}100%{opacity:0;transform:translateX(calc(var(--dist,360px) - 4px))}}
+@keyframes dxbb{0%{transform:translateY(0)}8%{transform:translateY(-26px)}16%{transform:translateY(0)}23%{transform:translateY(-15px)}30%{transform:translateY(0)}35%{transform:translateY(-7px)}40%{transform:translateY(0)}44%{transform:translateY(-3px)}48%,100%{transform:translateY(0)}}
+.dog-walker.v4.walk{animation:dxfetch 3.4s ease-out forwards}
+@keyframes dxfetch{0%{opacity:0;transform:translateX(0)}5%{opacity:1}64%,90%{opacity:1;transform:translateX(calc(var(--dist,360px) - 82px))}100%{opacity:0;transform:translateX(calc(var(--dist,360px) - 82px))}}
+.dog-walker.v4.walk .leg-a{animation:dogleg .13s ease-in-out 16 alternate}.dog-walker.v4.walk .leg-b{animation:dogleg .13s ease-in-out 16 alternate-reverse}
+.dog-walker.v4.walk .dog{animation:dogbob .13s 16 alternate}.dog-walker.v4.walk .tail{animation-duration:.14s}
+.dog-walker.v4.walk .tongue{animation:dxon 3.4s steps(1) forwards}
+@keyframes dxon{0%{opacity:0}62%,100%{opacity:1}}
+.dog-walker.v5.walk,.dog-walker.v7.walk,.dog-walker.v8.walk{animation:dxmid 4.2s linear forwards}
+.dog-walker.v7.walk,.dog-walker.v8.walk{animation-duration:3.6s}
+@keyframes dxmid{0%{opacity:0;transform:translateX(var(--mid,150px))}10%,88%{opacity:1;transform:translateX(var(--mid,150px))}100%{opacity:0;transform:translateX(var(--mid,150px))}}
+.dog-walker.v5.walk .leg-a,.dog-walker.v5.walk .leg-b{animation:dxlie 4.2s ease-in-out forwards}
+.dog-walker.v5.walk .dog{animation:dxdown 4.2s ease-in-out forwards}
+.dog-walker.v5.walk .shut{animation:dxshut 4.2s steps(1) forwards}.dog-walker.v5.walk .open{animation:dxopen 4.2s steps(1) forwards}
+.dog-walker.v5.walk .tail{animation:none}
+@keyframes dxlie{0%,18%{transform:scaleY(1)}30%,100%{transform:scaleY(.25)}}
+@keyframes dxdown{0%,18%{transform:translateY(0)}30%,100%{transform:translateY(7px)}}
+@keyframes dxshut{0%{opacity:0}34%,100%{opacity:1}}@keyframes dxopen{0%{opacity:1}34%,100%{opacity:0}}
+.dog-zz{position:absolute;left:44px;top:-6px}
+.dog-zz i{position:absolute;font:italic 500 13px/1 var(--serif);color:var(--muted);opacity:0}
+.dog-zz i:nth-child(2){left:7px;top:-7px;font-size:15px}.dog-zz i:nth-child(3){left:15px;top:-15px;font-size:17px}
+.dog-walker.v5.walk .dog-zz i{animation:dxz 1.4s ease-out 2}.dog-walker.v5.walk .dog-zz i:nth-child(1){animation-delay:1.4s}.dog-walker.v5.walk .dog-zz i:nth-child(2){animation-delay:1.7s}.dog-walker.v5.walk .dog-zz i:nth-child(3){animation-delay:2s}
+@keyframes dxz{0%{opacity:0;transform:translateY(5px)}30%,70%{opacity:1}100%{opacity:0;transform:translate(2px,-4px)}}
+.dog-walker.v6.walk{animation:dxhop 3s linear forwards}
+@keyframes dxhop{0%{opacity:0;transform:translateX(0)}5%{opacity:1}92%{opacity:1}100%{opacity:0;transform:translateX(var(--dist,360px))}}
+.dog-walker.v6.walk .dog{animation:dxhopy .5s cubic-bezier(.3,0,.7,1) 6}
+@keyframes dxhopy{0%,100%{transform:translateY(0) scale(1.06,.9)}15%{transform:translateY(-4px) scale(.96,1.06)}50%{transform:translateY(-18px) scale(1,1)}85%{transform:translateY(-3px) scale(.98,1.03)}}
+.dog-walker.v6.walk .leg-a,.dog-walker.v6.walk .leg-b{animation:dxtuck .5s ease-in-out 6}
+@keyframes dxtuck{0%,100%{transform:rotate(0)}50%{transform:rotate(35deg)}}
+.dog-walker.v7.walk .dog{transform-origin:30px 22px;animation:dxspin .42s linear 5,dxdizzy .5s ease-in-out 2.1s 3 alternate}
+@keyframes dxspin{0%{transform:scaleX(1)}25%{transform:scaleX(.08)}50%{transform:scaleX(-1)}75%{transform:scaleX(.08)}100%{transform:scaleX(1)}}
+@keyframes dxdizzy{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.dog-walker.v7.walk .leg-a{animation:dogleg .1s 20 alternate}.dog-walker.v7.walk .leg-b{animation:dogleg .1s 20 alternate-reverse}
+.dog-walker.v7.walk .shut{animation:dxshut2 3.6s steps(1) forwards}.dog-walker.v7.walk .open{animation:dxopen2 3.6s steps(1) forwards}
+@keyframes dxshut2{0%{opacity:0}58%,100%{opacity:1}}@keyframes dxopen2{0%{opacity:1}58%,100%{opacity:0}}
+.dog-stars{position:absolute;left:30px;top:-8px;opacity:0}
+.dog-walker.v7.walk .dog-stars{animation:dxstars 3.6s linear forwards}
+@keyframes dxstars{0%,58%{opacity:0;transform:rotate(0)}64%,90%{opacity:1}100%{opacity:0;transform:rotate(25deg)}}
+.dog-walker.v8.walk .leg-a,.dog-walker.v8.walk .leg-b{animation:none}
+.dog-walker.v8.walk .head{transform-origin:44px 22px;animation:dxtilt 3.6s ease-in-out forwards}
+@keyframes dxtilt{0%,15%{transform:rotate(0)}24%,48%{transform:rotate(-12deg)}56%,80%{transform:rotate(8deg)}90%,100%{transform:rotate(0)}}
+.dog-walker.v8.walk .dog{animation:dxbark 3.6s ease-out forwards}
+@keyframes dxbark{0%,26%,32%,58%,64%,100%{transform:translateY(0)}29%,61%{transform:translateY(-4px)}}
+.dog-walker.v8.walk .tongue{animation:dxtg 3.6s steps(1) forwards}
+@keyframes dxtg{0%{opacity:0}26%{opacity:1}50%{opacity:0}58%{opacity:1}84%{opacity:0}}
+.dog-bub{position:absolute;left:46px;top:-18px;padding:1px 7px 2px;border:1.4px solid #1B1B1B;border-radius:10px;background:#FFF0BF;color:#33363F;font:italic 600 13px/1.2 var(--serif);opacity:0;white-space:nowrap}
+.dog-walker.v8.walk .dog-bub{animation:dxbub 3.6s ease-out forwards}
+@keyframes dxbub{0%,25%{opacity:0;transform:scale(.5)}29%{opacity:1;transform:scale(1.15)}33%,46%{opacity:1;transform:scale(1)}50%,57%{opacity:0;transform:scale(.8)}61%{opacity:1;transform:scale(1.15) rotate(4deg)}65%,80%{opacity:1;transform:scale(1) rotate(4deg)}86%,100%{opacity:0}}
+.dog-flower.on{animation:dogfade 4.4s linear forwards}
+.dog-walker.v9.walk{animation:dxsniff 4.4s linear forwards}
+@keyframes dxsniff{0%{opacity:0;transform:translateX(0)}5%{opacity:1}48%,90%{opacity:1;transform:translateX(calc(var(--dist,360px) - 44px))}100%{opacity:0;transform:translateX(calc(var(--dist,360px) - 44px))}}
+.dog-walker.v9.walk .leg-a{animation:dogleg .3s ease-in-out 7 alternate}.dog-walker.v9.walk .leg-b{animation:dogleg .3s ease-in-out 7 alternate-reverse}
+.dog-walker.v9.walk .dog{animation:dogbob .3s 7 alternate}
+.dog-walker.v9.walk .head{transform-origin:40px 24px;animation:dxnod .18s ease-in-out 2.1s 8 alternate}
+@keyframes dxnod{from{transform:rotate(0)}to{transform:rotate(9deg)}}
+.dog-sn{position:absolute;left:58px;top:16px}
+.dog-sn i{position:absolute;width:3px;height:3px;border-radius:50%;border:1px solid var(--muted);opacity:0}
+.dog-sn i:nth-child(2){left:4px;top:-4px}.dog-sn i:nth-child(3){left:7px;top:2px}
+.dog-walker.v9.walk .dog-sn i{animation:dxpuff .5s ease-out 2.1s 3}.dog-walker.v9.walk .dog-sn i:nth-child(2){animation-delay:2.25s}.dog-walker.v9.walk .dog-sn i:nth-child(3){animation-delay:2.4s}
+@keyframes dxpuff{0%{opacity:0;transform:scale(.4)}40%{opacity:1}100%{opacity:0;transform:translateX(3px) scale(1.2)}}
+.dog-walker.v9.walk .dog-heart{left:46px;right:auto;top:-14px;animation:dxhrt 4.4s ease-out forwards}
+@keyframes dxhrt{0%,74%{opacity:0;transform:translateY(4px) scale(.6)}78%{opacity:1;transform:scale(1.2)}88%{opacity:1;transform:translateY(-6px) scale(1)}100%{opacity:0;transform:translateY(-12px)}}
+.dog-walker.v10.walk{height:40px;overflow:hidden;animation:dxpeekbox 3.4s linear forwards}
+@keyframes dxpeekbox{0%,100%{opacity:1;transform:translateX(var(--mid,150px))}}
+.dog-walker.v10.walk .dog>g:not(.head),.dog-walker.v10.walk .dog-name{opacity:0}
+.dog-walker.v10.walk .dog{animation:dxpeek 3.4s ease-in-out forwards}
+@keyframes dxpeek{0%{transform:translateY(44px)}18%{transform:translateY(12px)}24%{transform:translateY(16px)}28%,72%{transform:translateY(14px)}78%{transform:translateY(11px)}100%{transform:translateY(44px)}}
+.dog-walker.v10.walk .shut{animation:dxblink 3.4s steps(1) forwards}.dog-walker.v10.walk .open{animation:dxblinko 3.4s steps(1) forwards}
+@keyframes dxblink{0%,40%{opacity:0}42%{opacity:1}46%,52%{opacity:0}54%{opacity:1}58%,100%{opacity:0}}
+@keyframes dxblinko{0%,40%{opacity:1}42%{opacity:0}46%,52%{opacity:1}54%{opacity:0}58%,100%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.dog-walker.walk.v4,.dog-walker.walk.v6,.dog-walker.walk.v9{animation:dogfade 2s linear forwards}.dog-walker.walk *{animation:none!important}.dog-ball.on,.dog-flower.on{animation:none}}
 .yoga-pal.on.v2 .p7{opacity:1;transform-box:view-box;transform-origin:30px 44px;animation:yogasway 1.4s ease-in-out infinite alternate}
 .yoga-pal.on.v3 .p8{opacity:1;transform-box:view-box;transform-origin:30px 44px;animation:yogabreathe 1.4s ease-in-out infinite alternate}
 @keyframes yogasway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
 @keyframes yogabreathe{from{transform:scale(1)}to{transform:scale(1.05)}}
+/* yoga variants 4-8: lift-up, boat, headstand, drop-back, savasana */
+.yoga-pal .xp{opacity:0}
+.yoga-pal.on.v4 .x4,.yoga-pal.on.v5 .x5,.yoga-pal.on.v6 .x6,.yoga-pal.on.v7 .x7,.yoga-pal.on.v8 .x8{opacity:1}
+.yoga-pal.on.v4 .y-body{animation:yxlift 2.1s ease-in-out infinite}
+.yoga-pal.on.v4 .y-arms{transform-box:view-box;transform-origin:30px 44px;animation:yxliftarm 2.1s ease-in-out infinite}
+.yoga-pal .y-shake{opacity:0}.yoga-pal.on.v4 .y-shake{animation:yxshake 2.1s linear infinite}
+@keyframes yxlift{0%,20%{transform:translateY(4px)}35%,80%{transform:translateY(0)}38%,44%,50%,56%,62%,68%,74%{transform:translate(.5px,0)}41%,47%,53%,59%,65%,71%,77%{transform:translate(-.5px,0)}92%,100%{transform:translateY(4px)}}
+@keyframes yxliftarm{0%,20%{transform:scaleY(.78)}35%,80%{transform:scaleY(1)}92%,100%{transform:scaleY(.78)}}
+@keyframes yxshake{0%,34%{opacity:0}38%,78%{opacity:1}82%,100%{opacity:0}}
+.yoga-pal.on.v5 .y-body{transform-box:view-box;transform-origin:30px 43px;animation:yxrock .8s ease-in-out infinite alternate}
+@keyframes yxrock{from{transform:rotate(-6deg)}to{transform:rotate(5deg)}}
+.yoga-pal.on.v6 .y-body{transform-box:view-box;transform-origin:30px 44px;animation:yxhsway 4s ease-in-out forwards}
+.yoga-pal.on.v6 .y-tuck{animation:yxtuck 4s steps(1) forwards}.yoga-pal .x6 .y-up{opacity:0}.yoga-pal.on.v6 .y-up{animation:yxup 4s steps(1) forwards}
+@keyframes yxtuck{0%{opacity:1}35%,100%{opacity:0}}
+@keyframes yxup{0%{opacity:0}35%,100%{opacity:1}}
+@keyframes yxhsway{0%,35%{transform:rotate(0)}50%{transform:rotate(2.5deg)}65%{transform:rotate(-2deg)}80%,100%{transform:rotate(.5deg)}}
+.yoga-pal .x7 .y-s2,.yoga-pal .x7 .y-s3{opacity:0}
+.yoga-pal.on.v7 .y-s1{animation:yxw1 4s steps(1) forwards}.yoga-pal.on.v7 .y-s2{animation:yxw2 4s steps(1) forwards}.yoga-pal.on.v7 .y-s3{animation:yxw3 4s steps(1) forwards}
+@keyframes yxw1{0%{opacity:1}30%,100%{opacity:0}}
+@keyframes yxw2{0%{opacity:0}30%{opacity:1}50%,100%{opacity:0}}
+@keyframes yxw3{0%{opacity:0}50%,100%{opacity:1}}
+.yoga-pal .y-zz text{opacity:0}.yoga-pal.on.v8 .y-zz text{animation:yxzz 2s ease-out infinite}.yoga-pal.on.v8 .y-z2{animation-delay:.5s!important}.yoga-pal.on.v8 .y-z3{animation-delay:1s!important}
+@keyframes yxzz{0%{opacity:0;transform:translate(0,4px)}25%,80%{opacity:1}100%{opacity:0;transform:translate(2px,-3px)}}
+@media (prefers-reduced-motion: reduce){.yoga-pal.on .xp *{animation:none!important}.yoga-pal.on.v6 .y-tuck,.yoga-pal.on.v7 .y-s1,.yoga-pal.on.v7 .y-s2{opacity:0}.yoga-pal.on.v6 .y-up,.yoga-pal.on.v7 .y-s3,.yoga-pal.on.v8 .y-zz text{opacity:1}}
+
 .tea-pal .vb,.tea-pal .vc{display:none}
 .tea-pal .lid{transform-box:view-box}
 .tea-pal.on.v2 .lid{animation:gaiwanlid 4.4s ease-in-out}
@@ -264,6 +367,49 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
 .tea-pal .swish{opacity:0}
 .tea-pal.on .swish{animation:swish .32s ease-in-out infinite alternate}
 .tea-pal.on .s-r{animation-delay:.16s}
+/* coffee versions (v4 latte art, v5 pour-over, v6 iced) */
+.tea-pal .vd,.tea-pal .ve,.tea-pal .vf{display:none}
+.tea-pal.v4 .va,.tea-pal.v5 .va,.tea-pal.v6 .va{display:none}
+.tea-pal.v4 .vd,.tea-pal.v5 .ve,.tea-pal.v6 .vf{display:inline}
+.tea-word.coffee{background-image:linear-gradient(to top, var(--coffee) 50%, var(--muted) 50%);border-bottom-color:#A87650}
+.tea-pal .cf-milk,.tea-pal .cf-heart,.tea-pal .cf-steam,.tea-pal .cf-water,.tea-pal .cf-drip,.tea-pal .cf-dew,.tea-pal .cf-spark{opacity:0}
+.tea-pal .cf-heart,.tea-pal .cf-steam,.tea-pal .cf-bloom,.tea-pal .cf-dew,.tea-pal .cf-spark{transform-box:fill-box;transform-origin:50% 50%}
+.tea-pal .cf-pitch{transform-box:view-box;transform-origin:14px 24px}
+.tea-pal.on.v4 .cf-pitch{animation:cfpitch 4.4s ease-in-out}
+.tea-pal.on.v4 .cf-milk{animation:cfmilk 4.4s linear}
+.tea-pal.on.v4 .cf-surf{animation:cfsurf 4.4s ease-out forwards}
+.tea-pal.on.v4 .cf-heart{animation:cfheart 4.4s ease-out forwards}
+.tea-pal.on.v4 .cf-steam,.tea-pal.on.v5 .cf-steam{animation:teasteam 4.4s ease-out}.tea-pal.on .cs2{animation-delay:.3s}
+@keyframes cfpitch{0%,10%{transform:rotate(0)}20%,56%{transform:rotate(30deg)}66%,100%{transform:rotate(0)}}
+@keyframes cfmilk{0%,19%{opacity:0}21%,55%{opacity:1}58%,100%{opacity:0}}
+@keyframes cfsurf{0%,24%{fill:#6B3E22}55%,100%{fill:#C99A6E}}
+@keyframes cfheart{0%,48%{opacity:0;transform:scale(.3)}58%{opacity:1;transform:scale(1.15)}64%,100%{opacity:1;transform:scale(1)}}
+.tea-pal .cf-kettle{transform-box:view-box;transform-origin:11px 25px}
+.tea-pal .cf-fill{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0)}
+.tea-pal.on.v5 .cf-kettle{animation:cfkettle 4.4s ease-in-out}
+.tea-pal.on.v5 .cf-water{animation:cfmilk 4.4s linear}
+.tea-pal.on.v5 .cf-bloom{animation:cfbloom .5s ease-in-out 1s 4 alternate}.tea-pal.on .cb2{animation-delay:1.2s}.tea-pal.on .cb3{animation-delay:1.4s}
+.tea-pal.on.v5 .cf-drip{animation:cfdrip .55s ease-in 1.1s 5}.tea-pal.on .cd2{animation-delay:1.38s}
+.tea-pal.on.v5 .cf-fill{animation:cffill 4.4s ease-out forwards}
+@keyframes cfkettle{0%,10%{transform:rotate(0)}20%,56%{transform:rotate(20deg)}66%,100%{transform:rotate(0)}}
+@keyframes cfbloom{from{transform:scale(.6)}to{transform:scale(1.25)}}
+@keyframes cfdrip{0%{opacity:1;transform:translateY(0)}100%{opacity:.4;transform:translateY(10px)}}
+@keyframes cffill{0%,25%{transform:scaleY(0)}82%,100%{transform:scaleY(1)}}
+.tea-pal.on.v6 .cf-ice{animation:cfice 4.4s ease-out forwards}.tea-pal.on .ci2{animation-delay:.35s}.tea-pal.on .ci3{animation-delay:.7s}
+@keyframes cfice{0%{opacity:0;translate:0 -22px}12%{opacity:1;translate:0 -22px}22%{translate:0 2px}27%{translate:0 -1px}31%,100%{opacity:1;translate:0 0}}
+.tea-pal.v6 .cf-ice{opacity:0}
+.tea-pal .cf-straw{transform-box:view-box;transform-origin:44px 40px}
+.tea-pal.on.v6 .cf-straw{animation:cfstir .5s ease-in-out 1.8s 4 alternate}
+@keyframes cfstir{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+.tea-pal .cf-swirl{transform-box:fill-box}
+.tea-pal.on.v6 .cf-swirl{animation:cfswirl .6s linear 1.8s 4}
+@keyframes cfswirl{from{transform:translateX(0)}to{transform:translateX(-5px)}}
+.tea-pal.on.v6 .cf-dew{animation:cfdew 4.4s ease-in forwards}.tea-pal.on .cw2{animation-delay:.6s}
+@keyframes cfdew{0%,55%{opacity:0;transform:translateY(0)}65%{opacity:1}100%{opacity:1;transform:translateY(5px)}}
+.tea-pal.on.v6 .cf-spark{animation:cfspark .7s ease-in-out 2.4s 3 alternate}.tea-pal.on .cp2{animation-delay:2.75s}
+@keyframes cfspark{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1.1)}}
+@media (prefers-reduced-motion: reduce){.tea-pal.on [class*="cf-"]{animation:none!important}.tea-pal.on .cf-heart,.tea-pal.on .cf-ice{opacity:1}.tea-pal.on .cf-fill{transform:scaleY(1)}}
+
 .tea-pal .wisp,.tea-pal .heart-steam{opacity:0;transform-box:fill-box}
 .tea-pal.on .wisp{animation:wisp 2.2s ease-out infinite}
 .tea-pal.on .w2{animation-delay:.6s}
@@ -295,8 +441,8 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
       <div class="text">
         <h1>Yoonseo Choi<span lang="ko">최윤서</span></h1>
         <p class="lead">I build AI systems that keep <em>human perspectives alive and evolving</em>.</p>
-        <p>I’m a final-year Ph.D. candidate in the School of Computing at <strong>KAIST</strong>, advised by <a href="https://juhokim.com">Juho Kim</a>. My thesis builds <strong>generative user proxies</strong>: data-grounded personas and intents that help teams understand users at scale. I’m now also studying how people and AI agents coordinate in collaborative work.</p>
-        <p style="position:relative">I interned at Microsoft Research Cambridge and have led research collaborations with NAVER, Samsung, and Hyundai Motor Group. Before joining the world of Human-Computer Interaction, I studied Education at Korea University. Outside of research, you’ll usually find me <span class="dog-word" tabindex="0">walking my dog</span>, <span class="yoga-word" tabindex="0">practicing Ashtanga yoga</span>, or <span class="tea-word" tabindex="0">sipping tea</span>.<span class="tea-pal" aria-hidden="true"><svg viewBox="0 0 60 50" width="60" height="50"><defs><clipPath id="tea-cupclip"><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z"/></clipPath><clipPath id="tea-cupclip2"><path d="M33 35 L35 45 Q35.5 46 37 46 L45 46 Q46.5 46 47 45 L49 35 Z"/></clipPath></defs><g class="va"><rect x="27" y="45.4" width="26" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="#EEF2E6"/><g clip-path="url(#tea-cupclip)"><rect class="tea-fill" x="28" y="33" width="24" height="14" fill="#A9C46C"/></g><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="none" stroke="#1B1B1B" stroke-width="1.6" stroke-linejoin="round"/><path d="M31.6 38.5 Q40 41 48.4 38.5" fill="none" stroke="#7CA3B8" stroke-width="1.2" stroke-linecap="round"/><g fill="none" stroke="#8C93A3" stroke-width="1.6" stroke-linecap="round"><path class="steam s1" d="M36 28 q-2.5 -3 0 -6 q2.5 -3 0 -6"/><path class="steam s2" d="M40.5 28 q-2.5 -3 0 -6 q2.5 -3 0 -6"/><path class="steam s3" d="M45 28 q-2.5 -3 0 -6 q2.5 -3 0 -6"/></g><path class="stream" d="M35 27 Q37 33 38.5 41" fill="none" stroke="#A9C46C" stroke-width="2" stroke-linecap="round"/><g class="pot" stroke="#1B1B1B" stroke-linejoin="round"><path d="M7.5 27.5 L0.5 33.5 L3 36 L10 30 Z" fill="#2A2D3E" stroke-width="1.3"/><path d="M25 22 L32 18 L33.3 20.6 L26.5 26 Z" fill="#9CC9B0" stroke-width="1.4"/><ellipse cx="16" cy="24" rx="10.5" ry="8.5" fill="#9CC9B0" stroke-width="1.6"/><path d="M9.5 17.2 Q16 13.2 22.5 17.2 Z" fill="#9CC9B0" stroke-width="1.4"/><rect x="14.2" y="12.4" width="3.6" height="2.8" rx="1.2" fill="#2A2D3E" stroke-width="1.1"/><path d="M8 25.5 Q16 29 24 25.5" fill="none" stroke="#7CA3B8" stroke-width="1.2" stroke-linecap="round"/></g></g><g class="vb"><rect x="28" y="45.4" width="26" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M33 35 L35 45 Q35.5 46 37 46 L45 46 Q46.5 46 47 45 L49 35 Z" fill="#F6F3EA"/><g clip-path="url(#tea-cupclip2)"><rect class="tea-fill" x="32" y="37" width="18" height="10" fill="#C9B458"/></g><path d="M33 35 L35 45 Q35.5 46 37 46 L45 46 Q46.5 46 47 45 L49 35 Z" fill="none" stroke="#1B1B1B" stroke-width="1.5" stroke-linejoin="round"/><path d="M34.4 40.5 L47.6 40.5" stroke="#7CA3B8" stroke-width="1.1" stroke-linecap="round"/><g fill="none" stroke="#8C93A3" stroke-width="1.5" stroke-linecap="round"><path class="steam s1" d="M38.5 32 q-2 -2.5 0 -5 q2 -2.5 0 -5"/><path class="steam s2" d="M43.5 32 q-2 -2.5 0 -5 q2 -2.5 0 -5"/></g><path class="stream" d="M28.5 18.8 Q37 21 40.5 38" fill="none" stroke="#C9B458" stroke-width="1.8" stroke-linecap="round"/><g class="pot" stroke="#1B1B1B" stroke-linejoin="round"><ellipse cx="16" cy="27.2" rx="10" ry="2.3" fill="#9CC9B0" stroke-width="1.4"/><path d="M8 15 Q8 26 16 26 Q24 26 24 15 Z" fill="#F6F3EA" stroke-width="1.6"/><path d="M9 19.5 Q16 22 23 19.5" fill="none" stroke="#7CA3B8" stroke-width="1.1" stroke-linecap="round"/><g class="lid"><path d="M6.5 15.2 Q16 7.5 25.5 15.2 Z" fill="#F6F3EA" stroke-width="1.5"/><ellipse cx="16" cy="10.2" rx="2.6" ry="1.5" fill="#9CC9B0" stroke-width="1.2"/></g></g></g><g class="vc"><rect x="27" y="45.4" width="26" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="#EEF2E6"/><g clip-path="url(#tea-cupclip)"><rect x="28" y="34" width="24" height="13" fill="#A9C46C"/></g><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="none" stroke="#1B1B1B" stroke-width="1.6" stroke-linejoin="round"/><ellipse cx="44" cy="35.2" rx="2.6" ry="1.1" fill="#3E7A3A" transform="rotate(-20 44 35.2)"/><g fill="none" stroke="#8C93A3" stroke-width="1.5" stroke-linecap="round"><path class="wisp w1" d="M36 30 q-2 -2.5 0 -5"/><path class="wisp w2" d="M44 30 q2 -2.5 0 -5"/></g><path class="heart-steam" d="M40 24 C 35 20, 32.5 15, 36.5 12.5 C 38.5 11.5, 40 13, 40 14.5 C 40 13, 41.5 11.5, 43.5 12.5 C 47.5 15, 45 20, 40 24 Z" fill="#FFFFFF" fill-opacity=".55" stroke="#8C93A3" stroke-width="1.5" stroke-linejoin="round"/></g></svg></span><span class="yoga-pal" aria-hidden="true"><svg viewBox="0 0 60 50" width="60" height="50"><rect x="3" y="45" width="54" height="3.5" rx="1.75" fill="#F4A3C0" stroke="#1B1B1B" stroke-width="1.4"/><g class="pose p1" fill="none" stroke-linecap="round"><path d="M30 31 L28 44 M30 31 L32 44 M30 19 L30 31 M30 20 L25 4 M30 20 L35 4" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 31 L28 44 M30 31 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 19 L30 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L25 4 M30 20 L35 4" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="12" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="30" cy="6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="pose p2" fill="none" stroke-linecap="round"><path d="M31 29 L30 44 M31 29 L32 44 M31 28 L36 37 M35 35 L35 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M31 29 L30 44 M31 29 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M31 28 L36 37" stroke="#7CCBA5" stroke-width="4.4"/><path d="M35 35 L35 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="37.5" cy="40" r="4.5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/></g><g class="pose p3" fill="none" stroke-linecap="round"><path d="M51 43 L33 43 M33 43 L21 30 M22 31 L21 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M51 43 L33 43" stroke="#2A2D3E" stroke-width="4.4"/><path d="M33 43 L21 30" stroke="#7CCBA5" stroke-width="4.4"/><path d="M22 31 L21 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="18" cy="24" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="14.5" cy="20" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="pose p4" fill="none" stroke-linecap="round"><path d="M32 16 L46 44 M32 16 L19 32 M19 32 L12 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M32 16 L46 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M32 16 L19 32" stroke="#7CCBA5" stroke-width="4.4"/><path d="M19 32 L12 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="21" cy="38" r="4.5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/></g><g class="pose p5" fill="none" stroke-linecap="round"><path d="M31 29 L30 44 M31 29 L32 44 M31 28 L36 37 M35 35 L35 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M31 29 L30 44 M31 29 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M31 28 L36 37" stroke="#7CCBA5" stroke-width="4.4"/><path d="M35 35 L35 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="37.5" cy="40" r="4.5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/></g><g class="pose p6" fill="none" stroke-linecap="round"><path d="M30 31 L28 44 M30 31 L32 44 M30 19 L30 31 M30 20 L25 4 M30 20 L35 4" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 31 L28 44 M30 31 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 19 L30 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L25 4 M30 20 L35 4" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="12" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="30" cy="6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="pose p7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 31 L30 44 M30 31 L39 36 L31.5 38 M30 19 L30 31 M30 20 L25 9 L30 2.5 M30 20 L35 9 L30 2.5" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 31 L30 44 M30 31 L39 36 L31.5 38" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 19 L30 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L25 9 L30 2.5 M30 20 L35 9 L30 2.5" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="13.5" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><path d="M27.6 13.6 q1 1 2 0 M30.6 13.6 q1 1 2 0" stroke="#1B1B1B" stroke-width=".9"/></g><g class="pose p8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 30 L40 36 L41 44 M30 30 L17 44 M30 18 L30 30 M30 20 L13 20 M30 20 L47 20" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 30 L40 36 L41 44 M30 30 L17 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 18 L30 30" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L13 20 M30 20 L47 20" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="12" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="26.4" cy="7.6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g></svg></span><span class="dog-walker" aria-hidden="true"><svg viewBox="0 0 60 44" width="60" height="44"><g class="tail"><circle cx="7" cy="18" r="4.8" fill="#FFFFFF" stroke="#1B1B1B" stroke-width="1.6"/></g><g stroke="#1B1B1B" stroke-width="1.6" fill="#FFFFFF"><rect class="leg-a" x="14" y="28" width="5.5" height="10" rx="2.75"/><rect class="leg-b" x="20.5" y="28" width="5.5" height="10" rx="2.75"/><rect class="leg-b" x="32" y="28" width="5.5" height="10" rx="2.75"/><rect class="leg-a" x="38.5" y="28" width="5.5" height="10" rx="2.75"/></g><g fill="#FFFFFF" stroke="#1B1B1B" stroke-width="3.2"><circle cx="15" cy="24" r="7"/><circle cx="21" cy="21" r="7.5"/><circle cx="28" cy="21.5" r="7.5"/><circle cx="34" cy="24" r="7"/><circle cx="22" cy="28" r="6"/><circle cx="30" cy="28" r="6"/></g><g fill="#FFFFFF"><circle cx="15" cy="24" r="7"/><circle cx="21" cy="21" r="7.5"/><circle cx="28" cy="21.5" r="7.5"/><circle cx="34" cy="24" r="7"/><circle cx="22" cy="28" r="6"/><circle cx="30" cy="28" r="6"/></g><g fill="#FFFFFF" stroke="#1B1B1B" stroke-width="3.2"><circle cx="44" cy="15" r="10"/><circle cx="38" cy="9.5" r="5"/><circle cx="44" cy="6.5" r="5.5"/><circle cx="50" cy="9" r="5"/><circle cx="53" cy="15.5" r="4.5"/><circle cx="50" cy="21.5" r="5"/><circle cx="40" cy="21" r="5"/><circle cx="35.5" cy="15" r="4.5"/></g><g fill="#FFFFFF"><circle cx="44" cy="15" r="10"/><circle cx="38" cy="9.5" r="5"/><circle cx="44" cy="6.5" r="5.5"/><circle cx="50" cy="9" r="5"/><circle cx="53" cy="15.5" r="4.5"/><circle cx="50" cy="21.5" r="5"/><circle cx="40" cy="21" r="5"/><circle cx="35.5" cy="15" r="4.5"/></g><g fill="#F4A3C0" stroke="#1B1B1B" stroke-width="1.1" stroke-linejoin="round"><path d="M40.5 1.8 L44 4 L40.5 6.2 Z"/><path d="M47.5 1.8 L44 4 L47.5 6.2 Z"/><circle cx="44" cy="4" r="1.3"/></g><circle cx="43" cy="15" r="1.7" fill="#1B1B1B"/><circle cx="49.5" cy="14.5" r="1.7" fill="#1B1B1B"/><circle cx="43.5" cy="14.4" r=".55" fill="#FFFFFF"/><circle cx="50" cy="13.9" r=".55" fill="#FFFFFF"/><ellipse cx="54.2" cy="18" rx="2" ry="1.6" fill="#1B1B1B"/><path d="M50.5 20.8 Q52.3 22.2 54 20.8" fill="none" stroke="#1B1B1B" stroke-width="1.2" stroke-linecap="round"/></svg><svg class="dog-heart" viewBox="0 0 12 11" width="14" height="13"><path d="M6 10 L1.6 5.6 A2.7 2.7 0 0 1 6 2.2 A2.7 2.7 0 0 1 10.4 5.6 Z" fill="#EE5F86" stroke="#1B1B1B" stroke-width="1" stroke-linejoin="round"/></svg><span class="dog-name">yeolmoo</span></span></p>
+        <p>I’m a final-year Ph.D. candidate in the School of Computing at <strong>KAIST</strong>, advised by <a href="https://juhokim.com">Juho Kim</a>. My thesis builds <strong>generative user proxies</strong>: interactive, data-grounded personas and intents that help teams understand users at scale. Building on this, I now explore how AI agents reshape the way people work together, what forms of proxies can support human-AI collaboration, and what successful collaboration could look like.</p>
+        <p style="position:relative">I interned at Microsoft Research Cambridge and have led research collaborations with NAVER, Samsung Research, and Hyundai Motor Group. Before joining the world of Human-Computer Interaction, I studied Education at Korea University. Outside of research, you’ll usually find me <span class="dog-word" tabindex="0">walking my dog</span>, <span class="yoga-word" tabindex="0">practicing Ashtanga yoga</span>, or <span class="tea-word" tabindex="0">sipping coffee or tea</span>.<span class="tea-pal" aria-hidden="true"><svg viewBox="0 0 60 50" width="60" height="50"><defs><clipPath id="tea-cupclip"><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z"/></clipPath><clipPath id="tea-cupclip2"><path d="M33 35 L35 45 Q35.5 46 37 46 L45 46 Q46.5 46 47 45 L49 35 Z"/></clipPath></defs><g class="va"><rect x="27" y="45.4" width="26" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="#EEF2E6"/><g clip-path="url(#tea-cupclip)"><rect class="tea-fill" x="28" y="33" width="24" height="14" fill="#A9C46C"/></g><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="none" stroke="#1B1B1B" stroke-width="1.6" stroke-linejoin="round"/><path d="M31.6 38.5 Q40 41 48.4 38.5" fill="none" stroke="#7CA3B8" stroke-width="1.2" stroke-linecap="round"/><g fill="none" stroke="#8C93A3" stroke-width="1.6" stroke-linecap="round"><path class="steam s1" d="M36 28 q-2.5 -3 0 -6 q2.5 -3 0 -6"/><path class="steam s2" d="M40.5 28 q-2.5 -3 0 -6 q2.5 -3 0 -6"/><path class="steam s3" d="M45 28 q-2.5 -3 0 -6 q2.5 -3 0 -6"/></g><path class="stream" d="M35 27 Q37 33 38.5 41" fill="none" stroke="#A9C46C" stroke-width="2" stroke-linecap="round"/><g class="pot" stroke="#1B1B1B" stroke-linejoin="round"><path d="M7.5 27.5 L0.5 33.5 L3 36 L10 30 Z" fill="#2A2D3E" stroke-width="1.3"/><path d="M25 22 L32 18 L33.3 20.6 L26.5 26 Z" fill="#9CC9B0" stroke-width="1.4"/><ellipse cx="16" cy="24" rx="10.5" ry="8.5" fill="#9CC9B0" stroke-width="1.6"/><path d="M9.5 17.2 Q16 13.2 22.5 17.2 Z" fill="#9CC9B0" stroke-width="1.4"/><rect x="14.2" y="12.4" width="3.6" height="2.8" rx="1.2" fill="#2A2D3E" stroke-width="1.1"/><path d="M8 25.5 Q16 29 24 25.5" fill="none" stroke="#7CA3B8" stroke-width="1.2" stroke-linecap="round"/></g></g><g class="vb"><rect x="28" y="45.4" width="26" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M33 35 L35 45 Q35.5 46 37 46 L45 46 Q46.5 46 47 45 L49 35 Z" fill="#F6F3EA"/><g clip-path="url(#tea-cupclip2)"><rect class="tea-fill" x="32" y="37" width="18" height="10" fill="#C9B458"/></g><path d="M33 35 L35 45 Q35.5 46 37 46 L45 46 Q46.5 46 47 45 L49 35 Z" fill="none" stroke="#1B1B1B" stroke-width="1.5" stroke-linejoin="round"/><path d="M34.4 40.5 L47.6 40.5" stroke="#7CA3B8" stroke-width="1.1" stroke-linecap="round"/><g fill="none" stroke="#8C93A3" stroke-width="1.5" stroke-linecap="round"><path class="steam s1" d="M38.5 32 q-2 -2.5 0 -5 q2 -2.5 0 -5"/><path class="steam s2" d="M43.5 32 q-2 -2.5 0 -5 q2 -2.5 0 -5"/></g><path class="stream" d="M28.5 18.8 Q37 21 40.5 38" fill="none" stroke="#C9B458" stroke-width="1.8" stroke-linecap="round"/><g class="pot" stroke="#1B1B1B" stroke-linejoin="round"><ellipse cx="16" cy="27.2" rx="10" ry="2.3" fill="#9CC9B0" stroke-width="1.4"/><path d="M8 15 Q8 26 16 26 Q24 26 24 15 Z" fill="#F6F3EA" stroke-width="1.6"/><path d="M9 19.5 Q16 22 23 19.5" fill="none" stroke="#7CA3B8" stroke-width="1.1" stroke-linecap="round"/><g class="lid"><path d="M6.5 15.2 Q16 7.5 25.5 15.2 Z" fill="#F6F3EA" stroke-width="1.5"/><ellipse cx="16" cy="10.2" rx="2.6" ry="1.5" fill="#9CC9B0" stroke-width="1.2"/></g></g></g><g class="vc"><rect x="27" y="45.4" width="26" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="#EEF2E6"/><g clip-path="url(#tea-cupclip)"><rect x="28" y="34" width="24" height="13" fill="#A9C46C"/></g><path d="M30 32 Q30 46 40 46 Q50 46 50 32 Z" fill="none" stroke="#1B1B1B" stroke-width="1.6" stroke-linejoin="round"/><ellipse cx="44" cy="35.2" rx="2.6" ry="1.1" fill="#3E7A3A" transform="rotate(-20 44 35.2)"/><g fill="none" stroke="#8C93A3" stroke-width="1.5" stroke-linecap="round"><path class="wisp w1" d="M36 30 q-2 -2.5 0 -5"/><path class="wisp w2" d="M44 30 q2 -2.5 0 -5"/></g><path class="heart-steam" d="M40 24 C 35 20, 32.5 15, 36.5 12.5 C 38.5 11.5, 40 13, 40 14.5 C 40 13, 41.5 11.5, 43.5 12.5 C 47.5 15, 45 20, 40 24 Z" fill="#FFFFFF" fill-opacity=".55" stroke="#8C93A3" stroke-width="1.5" stroke-linejoin="round"/></g><g class="vd"><defs><clipPath id="cf-cup"><path d="M30 34 Q30 46 40 46 Q50 46 50 34 Z"/></clipPath></defs><rect x="27" y="45.4" width="28" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M50 36.5 q5 -.5 4.6 3.6 q-.4 3 -4.8 3" fill="none" stroke="#1B1B1B" stroke-width="1.6" stroke-linecap="round"/><path d="M30 34 Q30 46 40 46 Q50 46 50 34 Z" fill="#FFFFFF" stroke="#1B1B1B" stroke-width="1.6" stroke-linejoin="round"/><path d="M31.4 39.5 Q40 42 48.6 39.5" fill="none" stroke="#E7A07A" stroke-width="1.2" stroke-linecap="round"/><ellipse class="cf-surf" cx="40" cy="34" rx="10" ry="2.4" fill="#6B3E22" stroke="#1B1B1B" stroke-width="1.4"/><path class="cf-heart" d="M40 35.7 C36.6 34.5 36.3 33 37.8 32.6 C38.9 32.3 39.7 32.9 40 33.5 C40.3 32.9 41.1 32.3 42.2 32.6 C43.7 33 43.4 34.5 40 35.7 Z" fill="#FFF8EE"/><g fill="none" stroke="#8C93A3" stroke-width="1.5" stroke-linecap="round"><path class="cf-steam" d="M37 30 q-2 -2.5 0 -5 q2 -2.5 0 -5"/><path class="cf-steam cs2" d="M43 30 q-2 -2.5 0 -5 q2 -2.5 0 -5"/></g><path class="cf-milk" d="M26.7 22.1 Q34 23.5 39.5 33.4" fill="none" stroke="#1B1B1B" stroke-width="3.6" stroke-linecap="round"/><path class="cf-milk" d="M26.7 22.1 Q34 23.5 39.5 33.4" fill="none" stroke="#FFF8EE" stroke-width="1.8" stroke-linecap="round"/><g class="cf-pitch" stroke="#1B1B1B" stroke-linejoin="round"><path d="M8.6 20.5 q-4.2 .6 -3.6 4.6 q.5 3 3.4 2.6" fill="none" stroke-width="1.6" stroke-linecap="round"/><path d="M8 17.5 L20 17.5 L24.2 15.6 L21.4 19.2 L20 30 Q14 32.4 9 30 Z" fill="#DDE3EA" stroke-width="1.5"/><path d="M9.2 21.5 L19.6 21.5" stroke="#AEB8C4" stroke-width="1.1"/></g></g><g class="ve"><defs><clipPath id="cf-server"><path d="M31 33 L31 44.4 Q31 46 32.8 46 L47.2 46 Q49 46 49 44.4 L49 33 Z"/></clipPath></defs><rect x="27" y="45.4" width="26" height="3" rx="1.5" fill="#C98A5A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M49 35.5 q4.6 0 4.2 4 q-.4 3 -4.2 3" fill="none" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round"/><path d="M31 33 L31 44.4 Q31 46 32.8 46 L47.2 46 Q49 46 49 44.4 L49 33 Z" fill="#EEF4F6"/><g clip-path="url(#cf-server)"><rect class="cf-fill" x="30" y="36" width="20" height="11" fill="#7A4A2A"/></g><circle class="cf-drip" cx="40" cy="33.5" r="1" fill="#7A4A2A"/><circle class="cf-drip cd2" cx="40" cy="33.5" r="1" fill="#7A4A2A"/><path d="M31 33 L31 44.4 Q31 46 32.8 46 L47.2 46 Q49 46 49 44.4 L49 33 Z" fill="none" stroke="#1B1B1B" stroke-width="1.5" stroke-linejoin="round"/><path d="M33 36 L33 42" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/><path d="M28.5 24 L51.5 24 L44.5 32.2 L35.5 32.2 Z" fill="#F2C9AE" stroke="#1B1B1B" stroke-width="1.5" stroke-linejoin="round"/><path d="M34.6 32.2 L45.4 32.2 L45.4 34 L34.6 34 Z" fill="#F2C9AE" stroke="#1B1B1B" stroke-width="1.3" stroke-linejoin="round"/><path d="M36 26.5 L38.4 30.6 M44 26.5 L41.6 30.6" stroke="#D99E7C" stroke-width="1.1" stroke-linecap="round"/><ellipse cx="40" cy="24" rx="11" ry="1.5" fill="#6B3E22" stroke="#1B1B1B" stroke-width="1.2"/><g fill="#C68A55" stroke="#1B1B1B" stroke-width=".7"><circle class="cf-bloom" cx="37" cy="23.2" r="1.1"/><circle class="cf-bloom cb2" cx="41.5" cy="23" r="1.3"/><circle class="cf-bloom cb3" cx="44.5" cy="23.4" r=".9"/></g><g fill="none" stroke="#8C93A3" stroke-width="1.4" stroke-linecap="round"><path class="cf-steam" d="M38 19.5 q-2 -2.5 0 -5 q2 -2.5 0 -5"/><path class="cf-steam cs2" d="M43 19.5 q-2 -2.5 0 -5 q2 -2.5 0 -5"/></g><path class="cf-water" d="M31.1 19.5 Q37 19 39.5 23.4" fill="none" stroke="#8FC1D6" stroke-width="1.6" stroke-linecap="round"/><g class="cf-kettle" stroke="#1B1B1B" stroke-linejoin="round" stroke-linecap="round"><path d="M16.5 27 Q24.5 26.5 23.5 17.5 Q23.4 13.4 28 13" fill="none" stroke-width="3.6"/><path d="M16.5 27 Q24.5 26.5 23.5 17.5 Q23.4 13.4 28 13" fill="none" stroke="#5B6176" stroke-width="1.7"/><path d="M4.4 22 q-3.6 1.6 -.6 6.4" fill="none" stroke-width="1.6"/><path d="M4 31 L5.4 20.6 Q11 17.4 16.6 20.6 L18 31 Z" fill="#3D4255" stroke-width="1.5"/><rect x="9.6" y="16.4" width="2.8" height="2.4" rx="1" fill="#C98A5A" stroke-width="1.1"/></g></g><g class="vf"><defs><clipPath id="cf-glass"><path d="M31 18 L33 44.8 Q33.1 46 34.5 46 L45.5 46 Q46.9 46 47 44.8 L49 18 Z"/></clipPath></defs><rect x="29" y="45.4" width="22" height="3" rx="1.5" fill="#9CC9B0" stroke="#1B1B1B" stroke-width="1.3"/><g class="cf-straw"><path d="M43 34 L51.5 5" stroke="#1B1B1B" stroke-width="3.8" stroke-linecap="round"/><path d="M43 34 L51.5 5" stroke="#F4A3C0" stroke-width="2" stroke-linecap="round"/></g><path d="M31 18 L33 44.8 Q33.1 46 34.5 46 L45.5 46 Q46.9 46 47 44.8 L49 18 Z" fill="#EEF4F6"/><g clip-path="url(#cf-glass)"><rect x="29" y="22" width="22" height="25" fill="#7A4A2A"/><path class="cf-swirl" d="M30 24 q5 -2.4 10 0 t10 0 L50 27 q-5 2.4 -10 0 t-10 0 Z" fill="#D9B48F"/></g><g fill="#E8F4FA" stroke="#1B1B1B" stroke-width="1.1"><rect class="cf-ice ci1" x="34" y="21" width="6" height="6" rx="1.4" transform="rotate(-12 37 24)"/><rect class="cf-ice ci2" x="40" y="19.4" width="6" height="6" rx="1.4" transform="rotate(10 43 22.4)"/><rect class="cf-ice ci3" x="36.4" y="27" width="5.4" height="5.4" rx="1.3" transform="rotate(20 39 29.6)"/></g><path d="M31 18 L33 44.8 Q33.1 46 34.5 46 L45.5 46 Q46.9 46 47 44.8 L49 18 Z" fill="none" stroke="#1B1B1B" stroke-width="1.5" stroke-linejoin="round"/><path d="M33.4 30 L34.4 42" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity=".8"/><g fill="#BFE0EE" stroke="#1B1B1B" stroke-width=".7"><path class="cf-dew" d="M48.6 31 q1 1.6 0 2.4 q-1 -.8 0 -2.4 Z"/><path class="cf-dew cw2" d="M31.6 35 q1 1.6 0 2.4 q-1 -.8 0 -2.4 Z"/></g><g fill="#F5C842" stroke="#1B1B1B" stroke-width=".7" stroke-linejoin="round"><path class="cf-spark" d="M24 22 L25 25 L28 26 L25 27 L24 30 L23 27 L20 26 L23 25Z"/><path class="cf-spark cp2" d="M54 30 L54.7 32 L56.7 32.7 L54.7 33.4 L54 35.4 L53.3 33.4 L51.3 32.7 L53.3 32Z"/></g></g></svg></span><span class="yoga-pal" aria-hidden="true"><svg viewBox="0 0 60 50" width="60" height="50"><rect x="3" y="45" width="54" height="3.5" rx="1.75" fill="#F4A3C0" stroke="#1B1B1B" stroke-width="1.4"/><g class="pose p1" fill="none" stroke-linecap="round"><path d="M30 31 L28 44 M30 31 L32 44 M30 19 L30 31 M30 20 L25 4 M30 20 L35 4" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 31 L28 44 M30 31 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 19 L30 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L25 4 M30 20 L35 4" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="12" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="30" cy="6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="pose p2" fill="none" stroke-linecap="round"><path d="M31 29 L30 44 M31 29 L32 44 M31 28 L36 37 M35 35 L35 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M31 29 L30 44 M31 29 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M31 28 L36 37" stroke="#7CCBA5" stroke-width="4.4"/><path d="M35 35 L35 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="37.5" cy="40" r="4.5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/></g><g class="pose p3" fill="none" stroke-linecap="round"><path d="M51 43 L33 43 M33 43 L21 30 M22 31 L21 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M51 43 L33 43" stroke="#2A2D3E" stroke-width="4.4"/><path d="M33 43 L21 30" stroke="#7CCBA5" stroke-width="4.4"/><path d="M22 31 L21 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="18" cy="24" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="14.5" cy="20" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="pose p4" fill="none" stroke-linecap="round"><path d="M32 16 L46 44 M32 16 L19 32 M19 32 L12 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M32 16 L46 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M32 16 L19 32" stroke="#7CCBA5" stroke-width="4.4"/><path d="M19 32 L12 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="21" cy="38" r="4.5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/></g><g class="pose p5" fill="none" stroke-linecap="round"><path d="M31 29 L30 44 M31 29 L32 44 M31 28 L36 37 M35 35 L35 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M31 29 L30 44 M31 29 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M31 28 L36 37" stroke="#7CCBA5" stroke-width="4.4"/><path d="M35 35 L35 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="37.5" cy="40" r="4.5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/></g><g class="pose p6" fill="none" stroke-linecap="round"><path d="M30 31 L28 44 M30 31 L32 44 M30 19 L30 31 M30 20 L25 4 M30 20 L35 4" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 31 L28 44 M30 31 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 19 L30 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L25 4 M30 20 L35 4" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="12" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="30" cy="6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="pose p7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 31 L30 44 M30 31 L39 36 L31.5 38 M30 19 L30 31 M30 20 L25 9 L30 2.5 M30 20 L35 9 L30 2.5" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 31 L30 44 M30 31 L39 36 L31.5 38" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 19 L30 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L25 9 L30 2.5 M30 20 L35 9 L30 2.5" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="13.5" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><path d="M27.6 13.6 q1 1 2 0 M30.6 13.6 q1 1 2 0" stroke="#1B1B1B" stroke-width=".9"/></g><g class="pose p8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 30 L40 36 L41 44 M30 30 L17 44 M30 18 L30 30 M30 20 L13 20 M30 20 L47 20" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 30 L40 36 L41 44 M30 30 L17 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 18 L30 30" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L13 20 M30 20 L47 20" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="12" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="26.4" cy="7.6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="xp x4"><g class="y-arms"><g  fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 27 L16 44 M30 27 L44 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 27 L16 44 M30 27 L44 44" stroke="#FBE6D2" stroke-width="3.4"/></g></g><g class="y-body"><g  fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 38 L19 40 L35 36 M30 38 L38 40 L25 36 M30 37 L30 25" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 38 L19 40 L35 36 M30 38 L38 40 L25 36" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 37 L30 25" stroke="#7CCBA5" stroke-width="4.4"/><circle cx="30" cy="18" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="30" cy="12.2" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/><path d="M28 18.6 q2 1.6 4 0" stroke="#1B1B1B" stroke-width=".9" fill="none"/></g></g><g class="y-shake" stroke="#1B1B1B" stroke-width="1.1" stroke-linecap="round"><path d="M12 36 l3 0 M11 39 l4 0 M45 36 l3 0 M45 39 l4 0"/></g></g><g class="xp x5"><g class="y-body"><g  fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 42 L44 27 M30 42 L22.6 31 M23 31 L37 30.5" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 42 L44 27" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 42 L22.6 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M23 31 L37 30.5" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="18.6" cy="24.8" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="15.4" cy="20.6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/><path d="M16.6 26.4 q1.6 1.4 3.4 .2" stroke="#1B1B1B" stroke-width=".9" fill="none"/></g></g></g><g class="xp x6"><g class="y-body"><g class="y-tuck" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 21 L38 24 L37 14" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 21 L38 24 L37 14" stroke="#2A2D3E" stroke-width="4.4"/></g><g class="y-up" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 21 L30 5" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 21 L30 5" stroke="#2A2D3E" stroke-width="4.4"/></g><g  fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 33 L30 21 M30 33 L23 44 L29 44 M30 33 L37 44 L31 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 33 L30 21" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 33 L23 44 L29 44 M30 33 L37 44 L31 44" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="38.6" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="25.2" cy="41.6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/><path d="M27.6 38.2 q1 -1 2 0 M30.6 38.2 q1 -1 2 0" stroke="#1B1B1B" stroke-width=".9" fill="none"/></g></g></g><g class="xp x7"><g class="y-s1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 31 L28 44 M30 31 L32 44 M30 19 L30 31 M30 20 L25 4 M30 20 L35 4" stroke="#1B1B1B" stroke-width="6.6"/><path d="M30 31 L28 44 M30 31 L32 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M30 19 L30 31" stroke="#7CCBA5" stroke-width="4.4"/><path d="M30 20 L25 4 M30 20 L35 4" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="30" cy="12" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="30" cy="6" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/><path d="M28 13 q2 1.6 4 0" stroke="#1B1B1B" stroke-width=".9" fill="none"/></g><g class="y-s2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M31 31 L33 37.5 L30 44 M31 31 L35 37.5 L33 44 M31 31 Q29 24 24 21 M24 21 L17 13 M24 21 L15 15" stroke="#1B1B1B" stroke-width="6.6"/><path d="M31 31 L33 37.5 L30 44 M31 31 L35 37.5 L33 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M31 31 Q29 24 24 21" stroke="#7CCBA5" stroke-width="4.4"/><path d="M24 21 L17 13 M24 21 L15 15" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="19.6" cy="23.4" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="16" cy="27" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/></g><g class="y-s3" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="22.4" cy="36.4" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="25.6" cy="40.4" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/><path d="M20.4 36 q1 -1 2 0" stroke="#1B1B1B" stroke-width=".9" fill="none"/><path d="M35 23 L42 33 L45 44 M35 23 L40 33 L41 44 M19 30 Q25 19 35 23 M19 30 L14 44 M19 30 L16 44" stroke="#1B1B1B" stroke-width="6.6"/><path d="M35 23 L42 33 L45 44 M35 23 L40 33 L41 44" stroke="#2A2D3E" stroke-width="4.4"/><path d="M19 30 Q25 19 35 23" stroke="#7CCBA5" stroke-width="4.4"/><path d="M19 30 L14 44 M19 30 L16 44" stroke="#FBE6D2" stroke-width="3.4"/></g></g><g class="xp x8"><g  fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M32 41 L49 41.5 M32 41 L48 40 M18 41 L32 41 M19 42.6 L31 43.6" stroke="#1B1B1B" stroke-width="6.6"/><path d="M32 41 L49 41.5 M32 41 L48 40" stroke="#2A2D3E" stroke-width="4.4"/><path d="M18 41 L32 41" stroke="#7CCBA5" stroke-width="4.4"/><path d="M19 42.6 L31 43.6" stroke="#FBE6D2" stroke-width="3.4"/><circle cx="13" cy="40" r="5" fill="#FBE6D2" stroke="#1B1B1B" stroke-width="1.6"/><circle cx="7.6" cy="40" r="2.4" fill="#2A2D3E" stroke="#1B1B1B" stroke-width="1.2"/><path d="M11 37.6 q1 -1 2 0" stroke="#1B1B1B" stroke-width=".9" fill="none"/></g><g class="y-zz" font-family="EB Garamond, Georgia, serif" font-style="italic" fill="#2A2D3E"><text class="y-z1" x="16" y="30" font-size="7">z</text><text class="y-z2" x="21" y="24" font-size="8.5">z</text><text class="y-z3" x="27" y="17" font-size="10">z</text></g></g></svg></span><span class="dog-walker" aria-hidden="true"><svg class="dog" viewBox="0 0 60 44" width="60" height="44" overflow="visible"><g class="tail"><circle cx="7" cy="18" r="4.8" fill="#FFFFFF" stroke="#1B1B1B" stroke-width="1.6"/></g><g stroke="#1B1B1B" stroke-width="1.6" fill="#FFFFFF"><rect class="leg-a" x="14" y="28" width="5.5" height="10" rx="2.75"/><rect class="leg-b" x="20.5" y="28" width="5.5" height="10" rx="2.75"/><rect class="leg-b" x="32" y="28" width="5.5" height="10" rx="2.75"/><rect class="leg-a" x="38.5" y="28" width="5.5" height="10" rx="2.75"/></g><g fill="#FFFFFF" stroke="#1B1B1B" stroke-width="3.2"><circle cx="15" cy="24" r="7"/><circle cx="21" cy="21" r="7.5"/><circle cx="28" cy="21.5" r="7.5"/><circle cx="34" cy="24" r="7"/><circle cx="22" cy="28" r="6"/><circle cx="30" cy="28" r="6"/></g><g fill="#FFFFFF"><circle cx="15" cy="24" r="7"/><circle cx="21" cy="21" r="7.5"/><circle cx="28" cy="21.5" r="7.5"/><circle cx="34" cy="24" r="7"/><circle cx="22" cy="28" r="6"/><circle cx="30" cy="28" r="6"/></g><g class="head"><g fill="#FFFFFF" stroke="#1B1B1B" stroke-width="3.2"><circle cx="44" cy="15" r="10"/><circle cx="38" cy="9.5" r="5"/><circle cx="44" cy="6.5" r="5.5"/><circle cx="50" cy="9" r="5"/><circle cx="53" cy="15.5" r="4.5"/><circle cx="50" cy="21.5" r="5"/><circle cx="40" cy="21" r="5"/><circle cx="35.5" cy="15" r="4.5"/></g><g fill="#FFFFFF"><circle cx="44" cy="15" r="10"/><circle cx="38" cy="9.5" r="5"/><circle cx="44" cy="6.5" r="5.5"/><circle cx="50" cy="9" r="5"/><circle cx="53" cy="15.5" r="4.5"/><circle cx="50" cy="21.5" r="5"/><circle cx="40" cy="21" r="5"/><circle cx="35.5" cy="15" r="4.5"/></g><g fill="#F4A3C0" stroke="#1B1B1B" stroke-width="1.1" stroke-linejoin="round"><path d="M40.5 1.8 L44 4 L40.5 6.2 Z"/><path d="M47.5 1.8 L44 4 L47.5 6.2 Z"/><circle cx="44" cy="4" r="1.3"/></g><g class="open"><circle cx="43" cy="15" r="1.7" fill="#1B1B1B"/><circle cx="49.5" cy="14.5" r="1.7" fill="#1B1B1B"/><circle cx="43.5" cy="14.4" r=".55" fill="#FFFFFF"/><circle cx="50" cy="13.9" r=".55" fill="#FFFFFF"/></g><path class="shut" d="M41.3 14.6 q1.7 1.5 3.4 0 M47.8 14.1 q1.7 1.5 3.4 0" fill="none" stroke="#1B1B1B" stroke-width="1.2" stroke-linecap="round"/><path class="tongue" d="M51.5 21.3 q1 3 2.2 0 Z" fill="#EE5F86" stroke="#1B1B1B" stroke-width=".9" stroke-linejoin="round"/><ellipse cx="54.2" cy="18" rx="2" ry="1.6" fill="#1B1B1B"/><path d="M50.5 20.8 Q52.3 22.2 54 20.8" fill="none" stroke="#1B1B1B" stroke-width="1.2" stroke-linecap="round"/></g></svg><span class="dog-zz"><i>z</i><i>z</i><i>z</i></span><svg class="dog-stars" viewBox="0 0 30 10" width="30" height="10"><g fill="#F5C842" stroke="#1B1B1B" stroke-width=".8" stroke-linejoin="round"><path d="M5 1 L6 4 L9 5 L6 6 L5 9 L4 6 L1 5 L4 4Z"/><path d="M20 0 L21 3 L24 4 L21 5 L20 8 L19 5 L16 4 L19 3Z"/></g></svg><span class="dog-bub">woof!</span><span class="dog-sn"><i></i><i></i><i></i></span><svg class="dog-heart" viewBox="0 0 12 11" width="14" height="13"><path d="M6 10 L1.6 5.6 A2.7 2.7 0 0 1 6 2.2 A2.7 2.7 0 0 1 10.4 5.6 Z" fill="#EE5F86" stroke="#1B1B1B" stroke-width="1" stroke-linejoin="round"/></svg><span class="dog-name">yeolmoo</span></span><span class="dog-ball" aria-hidden="true"><svg  viewBox="0 0 12 12" width="12" height="12"><circle cx="6" cy="6" r="5" fill="#D9E85C" stroke="#1B1B1B" stroke-width="1.3"/><path d="M2 3.6 Q6 6 2.6 9.4 M10 2.6 Q6 6 9.8 8.6" fill="none" stroke="#FFFFFF" stroke-width="1"/></svg></span><span class="dog-flower" aria-hidden="true"><svg  viewBox="0 0 20 30" width="20" height="30"><path d="M10 14 L10 29" stroke="#3E8A5B" stroke-width="1.8"/><path d="M10 23 q-5 -1 -6 -5 q5 0 6 5" fill="#7CCBA5" stroke="#1B1B1B" stroke-width="1"/><g fill="#FFFFFF" stroke="#1B1B1B" stroke-width="1.1"><circle cx="10" cy="5" r="3.3"/><circle cx="15" cy="9" r="3.3"/><circle cx="13" cy="14.5" r="3.3"/><circle cx="7" cy="14.5" r="3.3"/><circle cx="5" cy="9" r="3.3"/></g><circle cx="10" cy="10" r="3" fill="#F5C842" stroke="#1B1B1B" stroke-width="1.1"/></svg></span></p>
         <div class="linkrow"><a href="mailto:yoon0u0@gmail.com">Email</a><a href="https://drive.google.com/file/d/18faLFeyfmQi3rs7Ch_r-N7-cH75iNYcJ/view?usp=sharing">CV</a><a href="https://scholar.google.com/citations?hl=en&amp;user=ubElnC4AAAAJ">Google Scholar</a><a href="https://github.com/yoon0u0">GitHub</a><a href="https://twitter.com/yoon0u0">X</a></div>
       </div>
       <div class="photo-col">
@@ -308,15 +454,18 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
     <section id="news" aria-labelledby="news-h">
       <h2 id="news-h">News</h2>
       <ul class="news" id="news-list">
-        <li><time datetime="2026-07">Jul 2026</time><span>Seminar at Microsoft Redmond on scaling search evaluation with LLM-generated user context.</span></li>
-        <li><time datetime="2026-07">Jul 2026</time><span>Seminar on Generative Proxies at the University of Cambridge.</span></li>
-        <li><time datetime="2026-06">Jun 2026</time><span>Started a summer internship at Microsoft Research Cambridge.</span></li>
-        <li><time datetime="2025-11">Nov 2025</time><span>Guest lecture on HAI Perspectives for Human-Centered Data Science at NYU Abu Dhabi.</span></li>
-        <li><time datetime="2025-10">Oct 2025</time><span>BloomIntent published at UIST 2025.</span></li>
-        <li class="more"><time datetime="2025">2025</time><span>Proxona published at CHI 2025.</span></li>
-        <li class="more"><time datetime="2023-10">Oct 2023</time><span>PhD seminar at Cornell Information Science.</span></li>
-        <li class="more"><time datetime="2023">2023</time><span>Creator-friendly Algorithms published at CHI 2023.</span></li>
-        <li class="more"><time datetime="2022">2022</time><span>Stylette received a Best Paper Honorable Mention at CHI 2022.</span></li>
+        <li><time datetime="2026-10">Oct 2026</time><span>Serving as Papers Chair Assistant for CSCW 2026 📝</span></li>
+        <li><time datetime="2026-07">Jul 2026</time><span>Gave a talk on Generative Proxies at the University of Cambridge 🎓</span></li>
+        <li><time datetime="2026-06">Jun 2026</time><span>Started a summer research internship at Microsoft Research Cambridge 🇬🇧</span></li>
+        <li class="more"><time datetime="2026-06">Jun 2026</time><span>Serving as General Chair Assistant for Festival of Learning 2026 📚</span></li>
+        <li class="more"><time datetime="2025-11">Nov 2025</time><span>Gave a guest lecture in the Human-Centered Data Science course at NYU Abu Dhabi 🧑‍🏫</span></li>
+        <li class="more"><time datetime="2025-10">Oct 2025</time><span>Attended UIST 2025 to present BloomIntent 🎉</span></li>
+        <li class="more"><time datetime="2025-04">Apr 2025</time><span>Presented Proxona at CHI 2025 in Yokohama 🌸</span></li>
+        <li class="more"><time datetime="2024-11">Nov 2024</time><span>Was asked to meet with the tech fellows from a Congresswoman’s team 🏛️</span></li>
+        <li class="more"><time datetime="2024-07">Jul 2024</time><span>Had a workshop paper accepted at the SIGIR 2024 LLM4Eval workshop 📄</span></li>
+        <li class="more"><time datetime="2023-10">Oct 2023</time><span>Gave a PhD seminar talk at Cornell Information Science 🗣️</span></li>
+        <li class="more"><time datetime="2023-04">Apr 2023</time><span>Attended CHI 2023 to present Creator-friendly Algorithms, with a Google travel grant ✈️</span></li>
+        <li class="more"><time datetime="2022-05">May 2022</time><span>Received a Best Paper Honorable Mention at CHI 2022 for Stylette 🏅</span></li>
       </ul>
       <button class="more-btn" id="more-news" type="button" aria-expanded="false" aria-controls="news-list">Show more</button>
     </section>
@@ -722,11 +871,16 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
     var box=p.closest('.text') || p;
     return box.getBoundingClientRect().bottom - p.getBoundingClientRect().top + 8;
   };
-  // each easter egg cycles through three versions, one per hover
-  var nextV=function(el){
-    var n=+(el.getAttribute('data-n')||0);
-    el.classList.remove('v1','v2','v3');
-    el.classList.add('v'+(n%3+1));
+  // center of a hover phrase's last line (phrases can wrap onto two lines)
+  var wordCenter=function(w,p){
+    var rs=w.getClientRects(), r=rs[rs.length-1], pr=p.getBoundingClientRect();
+    return r.left - pr.left + r.width/2;
+  };
+  // each easter egg cycles through its versions, one per hover (yoga has eight)
+  var nextV=function(el,k){
+    var n=+(el.getAttribute('data-n')||0); k=k||3;
+    for(var i=1;i<=10;i++) el.classList.remove('v'+i);
+    el.classList.add('v'+(n%k+1));
     el.setAttribute('data-n', n+1);
   };
   var dogWord=document.querySelector('.dog-word'), dog=document.querySelector('.dog-walker');
@@ -736,12 +890,18 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
       var p=dogWord.closest('p');
       dog.style.setProperty('--dist', Math.max(120, p.clientWidth-60)+'px');
       dog.style.top=(ground(p)-2)+'px';
-      nextV(dog);
+      nextV(dog,10);
       // the 'hello' version sits right under the words "walking my dog"
-      var mid=dogWord.offsetLeft + Math.min(dogWord.offsetWidth, 160)/2 - 30;
+      var mid=wordCenter(dogWord,p) - 30;
       dog.style.setProperty('--mid', Math.round(Math.max(0, Math.min(mid, p.clientWidth-60)))+'px');
       dog.classList.add('walk');
+      // props for the fetch (ball) and sniff (flower) versions
+      var gy=ground(p)-2, dist=dog.style.getPropertyValue('--dist');
+      if(dog.classList.contains('v4')){ ball.style.top=(gy+26)+'px'; ball.style.setProperty('--dist',dist); ball.classList.add('on'); }
+      if(dog.classList.contains('v9')){ flower.style.top=(gy+9)+'px'; flower.style.left='calc('+dist+' + 18px)'; flower.classList.add('on'); }
     };
+    var ball=document.querySelector('.dog-ball'), flower=document.querySelector('.dog-flower');
+    [ball,flower].forEach(function(el){ el.addEventListener('animationend',function(e){ if(e.target===el) el.classList.remove('on'); }); });
     dog.addEventListener('animationend',function(e){ if(e.target===dog) dog.classList.remove('walk'); });
     dogWord.addEventListener('mouseenter',walk);
     dogWord.addEventListener('focus',walk);
@@ -753,11 +913,11 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
     var flow=function(){
       if(pal.classList.contains('on')) return;
       var p=yogaWord.closest('p');
-      var left=yogaWord.offsetLeft + Math.min(yogaWord.offsetWidth, 140)/2 - 30;
+      var left=wordCenter(yogaWord,p) - 30;
       left=Math.max(0, Math.min(left, p.clientWidth-60));
       pal.style.left=left+'px';
       pal.style.top=ground(p)+'px';
-      nextV(pal);
+      nextV(pal,8);
       pal.classList.add('on');
     };
     pal.addEventListener('animationend',function(e){ if(e.target===pal) pal.classList.remove('on'); });
@@ -771,11 +931,15 @@ footer .wrap{border-top:1px solid var(--line);padding-block:24px 40px;font-size:
     var pour=function(){
       if(teaPal.classList.contains('on')) return;
       var p=teaWord.closest('p');
-      var left=teaWord.offsetLeft + teaWord.offsetWidth/2 - 30;
+      var left=wordCenter(teaWord,p) - 30;
       left=Math.max(0, Math.min(left, p.clientWidth-60));
       teaPal.style.left=left+'px';
       teaPal.style.top=ground(p)+'px';
-      nextV(teaPal);
+      // tea and coffee take turns: tea, coffee, tea, coffee...
+      var n=+(teaPal.getAttribute('data-n')||0), v=[1,4,2,5,3,6][n%6];
+      for(var i=1;i<=6;i++) teaPal.classList.remove('v'+i);
+      teaPal.classList.add('v'+v); teaPal.setAttribute('data-n', n+1);
+      teaWord.classList.toggle('coffee', v>=4);
       teaPal.classList.add('on');
       teaWord.classList.add('filled');
     };
